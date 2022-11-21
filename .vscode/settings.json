@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/__pycache__": true
+  },
+  "python.formatting.provider": "black"
+}
