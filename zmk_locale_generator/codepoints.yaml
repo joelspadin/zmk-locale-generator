@@ -109,231 +109,231 @@ z: Z
 
 # Latin-1 Supplement
 "\u00A0": [NON_BREAKING_SPACE, NBSP]
-"\u00A1": [INVERTED_EXCLAMATION, IEXCL]
-"\u00A2": CENT
-"\u00A3": POUND_SIGN
-"\u00A4": [CURRENCY_SIGN, CURREN]
-"\u00A5": YEN
-"\u00A6": BROKEN_BAR
-"\u00A7": [SECTION, SECT]
-"\u00A8": UMLAUT
-"\u00A9": COPYRIGHT
-"\u00AA": [FEMININE_ORDINAL_INDICATOR, ORDF]
-"\u00AB": [LEFT_ANGLE_QUOTE, LAQUO]
-"\u00AC": NOT
-"\u00AD": SOFT_HYPHEN
-"\u00AE": REGISTERED
-"\u00AF": [MACRON, MACR]
-"\u00B0": [DEGREE, DEG]
-"\u00B1": PLUS_MINUS
-"\u00B2": [SUPER2, SQUARE]
-"\u00B3": [SUPER3, CUBE]
-"\u00B4": ACUTE
-"\u00B5": [MU, MICRO]
-"\u00B6": [PILCROW, PARA]
-"\u00B7": [MIDDLE_DOT, MIDDOT]
-"\u00B8": CEDILLA
-"\u00B9": SUPER1
-"\u00BA": [MASCULINE_ORDINAL_INDICATOR, ORDM]
-"\u00BB": [RIGHT_ANGLE_QUOTE, RAQUO]
-"\u00BC": [ONE_QUARTER, FRAC_1_4]
-"\u00BD": [ONE_HALF, FRAC_1_2]
-"\u00BE": [THREE_QUARTERS, FRAC_3_4]
-"\u00BF": [INVERTED_QUESTION, IQMARK]
-"\u00C0": A_GRAVE
-"\u00C1": A_ACUTE
-"\u00C2": [A_CIRCUMFLEX, A_CIRC]
-"\u00C3": A_TILDE
-"\u00C4": A_UMLAUT
-"\u00C5": A_RING
-"\u00C6": AE
-"\u00C7": C_CEDILLA
-"\u00C8": E_GRAVE
-"\u00C9": E_ACUTE
-"\u00CA": [E_CIRCUMFLEX, E_CIRC]
-"\u00CB": E_UMLAUT
-"\u00CC": I_GRAVE
-"\u00CD": I_ACUTE
-"\u00CE": [I_CIRCUMFLEX, I_CIRC]
-"\u00CF": I_UMLAUT
-"\u00D0": ETH
-"\u00D1": N_TILDE
-"\u00D2": O_GRAVE
-"\u00D3": O_ACUTE
-"\u00D4": [O_CIRCUMFLEX, O_CIRC]
-"\u00D5": O_TILDE
-"\u00D6": O_UMLAUT
-"\u00D7": [MULTIPLY, MULT]
-"\u00D8": O_SLASH
-"\u00D9": U_GRAVE
-"\u00DA": U_ACUTE
-"\u00DB": [U_CIRCUMFLEX, U_CIRC]
-"\u00DC": U_UMLAUT
-"\u00DD": Y_ACUTE
-"\u00DE": THORN
-"\u00DF": [ESZETT, SZ]
-"\u00E0": A_GRAVE
-"\u00E1": A_ACUTE
-"\u00E2": [A_CIRCUMFLEX, A_CIRC]
-"\u00E3": A_TILDE
-"\u00E4": A_UMLAUT
-"\u00E5": A_RING
-"\u00E6": AE
-"\u00E7": C_CEDILLA
-"\u00E8": E_GRAVE
-"\u00E9": E_ACUTE
-"\u00EA": [E_CIRCUMFLEX, E_CIRC]
-"\u00EB": E_UMLAUT
-"\u00EC": I_GRAVE
-"\u00ED": I_ACUTE
-"\u00EE": [I_CIRCUMFLEX, I_CIRC]
-"\u00EF": I_UMLAUT
-"\u00F0": ETH
-"\u00F1": N_TILDE
-"\u00F2": O_GRAVE
-"\u00F3": O_ACUTE
-"\u00F4": [O_CIRCUMFLEX, O_CIRC]
-"\u00F5": O_TILDE
-"\u00F6": O_UMLAUT
-"\u00F7": [DIVIDE, DIV]
-"\u00F8": O_SLASH
-"\u00F9": U_GRAVE
-"\u00FA": U_ACUTE
-"\u00FB": [U_CIRCUMFLEX, U_CIRC]
-"\u00FC": U_UMLAUT
-"\u00FD": Y_ACUTE
-"\u00FE": THORN
-"\u00FF": Y_UMLAUT
+"\u00A1": [INVERTED_EXCLAMATION, IEXCL]         # ¡
+"\u00A2": CENT                                  # ¢
+"\u00A3": POUND_SIGN                            # £
+"\u00A4": [CURRENCY_SIGN, CURREN]               # ¤
+"\u00A5": YEN                                   # ¥
+"\u00A6": BROKEN_BAR                            # ¦
+"\u00A7": [SECTION, SECT]                       # §
+"\u00A8": UMLAUT                                # ¨
+"\u00A9": COPYRIGHT                             # ©
+"\u00AA": [FEMININE_ORDINAL_INDICATOR, ORDF]    # ª
+"\u00AB": [LEFT_ANGLE_QUOTE, LAQUO]             # «
+"\u00AC": NOT                                   # ¬
+"\u00AD": SOFT_HYPHEN                           # ­
+"\u00AE": REGISTERED                            # ®
+"\u00AF": [MACRON, MACR]                        # ¯
+"\u00B0": [DEGREE, DEG]                         # °
+"\u00B1": PLUS_MINUS                            # ±
+"\u00B2": [SUPER2, SQUARE]                      # ²
+"\u00B3": [SUPER3, CUBE]                        # ³
+"\u00B4": ACUTE                                 # ´
+"\u00B5": [MU, MICRO]                           # µ
+"\u00B6": [PILCROW, PARA]                       # ¶
+"\u00B7": [MIDDLE_DOT, MIDDOT]                  # ·
+"\u00B8": CEDILLA                               # ¸
+"\u00B9": SUPER1                                # ¹
+"\u00BA": [MASCULINE_ORDINAL_INDICATOR, ORDM]   # º
+"\u00BB": [RIGHT_ANGLE_QUOTE, RAQUO]            # »
+"\u00BC": [ONE_QUARTER, FRAC_1_4]               # ¼
+"\u00BD": [ONE_HALF, FRAC_1_2]                  # ½
+"\u00BE": [THREE_QUARTERS, FRAC_3_4]            # ¾
+"\u00BF": [INVERTED_QUESTION, IQMARK]           # ¿
+"\u00C0": A_GRAVE                               # À
+"\u00C1": A_ACUTE                               # Á
+"\u00C2": [A_CIRCUMFLEX, A_CIRC]                # Â
+"\u00C3": A_TILDE                               # Ã
+"\u00C4": A_UMLAUT                              # Ä
+"\u00C5": A_RING                                # Å
+"\u00C6": AE                                    # Æ
+"\u00C7": C_CEDILLA                             # Ç
+"\u00C8": E_GRAVE                               # È
+"\u00C9": E_ACUTE                               # É
+"\u00CA": [E_CIRCUMFLEX, E_CIRC]                # Ê
+"\u00CB": E_UMLAUT                              # Ë
+"\u00CC": I_GRAVE                               # Ì
+"\u00CD": I_ACUTE                               # Í
+"\u00CE": [I_CIRCUMFLEX, I_CIRC]                # Î
+"\u00CF": I_UMLAUT                              # Ï
+"\u00D0": ETH                                   # Ð
+"\u00D1": N_TILDE                               # Ñ
+"\u00D2": O_GRAVE                               # Ò
+"\u00D3": O_ACUTE                               # Ó
+"\u00D4": [O_CIRCUMFLEX, O_CIRC]                # Ô
+"\u00D5": O_TILDE                               # Õ
+"\u00D6": O_UMLAUT                              # Ö
+"\u00D7": [MULTIPLY, MULT]                      # ×
+"\u00D8": O_SLASH                               # Ø
+"\u00D9": U_GRAVE                               # Ù
+"\u00DA": U_ACUTE                               # Ú
+"\u00DB": [U_CIRCUMFLEX, U_CIRC]                # Û
+"\u00DC": U_UMLAUT                              # Ü
+"\u00DD": Y_ACUTE                               # Ý
+"\u00DE": THORN                                 # Þ
+"\u00DF": [ESZETT, SZ]                          # ß
+"\u00E0": A_GRAVE                               # à
+"\u00E1": A_ACUTE                               # á
+"\u00E2": [A_CIRCUMFLEX, A_CIRC]                # â
+"\u00E3": A_TILDE                               # ã
+"\u00E4": A_UMLAUT                              # ä
+"\u00E5": A_RING                                # å
+"\u00E6": AE                                    # æ
+"\u00E7": C_CEDILLA                             # ç
+"\u00E8": E_GRAVE                               # è
+"\u00E9": E_ACUTE                               # é
+"\u00EA": [E_CIRCUMFLEX, E_CIRC]                # ê
+"\u00EB": E_UMLAUT                              # ë
+"\u00EC": I_GRAVE                               # ì
+"\u00ED": I_ACUTE                               # í
+"\u00EE": [I_CIRCUMFLEX, I_CIRC]                # î
+"\u00EF": I_UMLAUT                              # ï
+"\u00F0": ETH                                   # ð
+"\u00F1": N_TILDE                               # ñ
+"\u00F2": O_GRAVE                               # ò
+"\u00F3": O_ACUTE                               # ó
+"\u00F4": [O_CIRCUMFLEX, O_CIRC]                # ô
+"\u00F5": O_TILDE                               # õ
+"\u00F6": O_UMLAUT                              # ö
+"\u00F7": [DIVIDE, DIV]                         # ÷
+"\u00F8": O_SLASH                               # ø
+"\u00F9": U_GRAVE                               # ù
+"\u00FA": U_ACUTE                               # ú
+"\u00FB": [U_CIRCUMFLEX, U_CIRC]                # û
+"\u00FC": U_UMLAUT                              # ü
+"\u00FD": Y_ACUTE                               # ý
+"\u00FE": THORN                                 # þ
+"\u00FF": Y_UMLAUT                              # ÿ
 
 # Latin Extended-A
-"\u0100": A_MACRON
-"\u0101": A_MACRON
-"\u0102": A_BREVE
-"\u0103": A_BREVE
-"\u0104": [A_OGONEK, A_OGON]
-"\u0105": [A_OGONEK, A_OGON]
-"\u0106": C_ACUTE
-"\u0107": C_ACUTE
-"\u0108": [C_CIRCUMFLEX, C_CIRC]
-"\u0109": [C_CIRCUMFLEX, C_CIRC]
-"\u010A": C_DOT
-"\u010B": C_DOT
-"\u010C": C_CARON
-"\u010D": C_CARON
-"\u010E": D_CARON
-"\u010F": D_CARON
-"\u0110": D_STROKE
-"\u0111": D_STROKE
-"\u0112": E_MACRON
-"\u0113": E_MACRON
-"\u0114": E_BREVE
-"\u0115": E_BREVE
-"\u0116": E_DOT
-"\u0117": E_DOT
-"\u0118": [E_OGONEK, E_OGON]
-"\u0119": [E_OGONEK, E_OGON]
-"\u011A": E_CARON
-"\u011B": E_CARON
-"\u011C": [E_CIRCUMFLEX, E_CIRC]
-"\u011D": [E_CIRCUMFLEX, E_CIRC]
-"\u011E": E_BREVE
-"\u011F": E_BREVE
-"\u0120": G_DOT
-"\u0121": G_DOT
-"\u0122": G_CEDILLA
-"\u0123": G_CEDILLA
-"\u0124": [H_CIRCUMFLEX, H_CIRC]
-"\u0125": [H_CIRCUMFLEX, H_CIRC]
-"\u0126": H_STROKE
-"\u0127": H_STROKE
-"\u0128": I_TILDE
-"\u0129": I_TILDE
-"\u012A": I_MACRON
-"\u012B": I_MACRON
-"\u012C": I_BREVE
-"\u012D": I_BREVE
-"\u012E": [I_OGONEK, I_OGON]
-"\u012F": [I_OGONEK, I_OGON]
-"\u0130": I_DOT
-"\u0131": I_DOT
-"\u0132": IJ
-"\u0133": IJ
-"\u0134": [J_CIRCUMFLEX, J_CIRC]
-"\u0135": [J_CIRCUMFLEX, J_CIRC]
-"\u0136": K_CEDILLA
-"\u0137": K_CEDILLA
-"\u0138": KRA
-"\u0139": L_ACUTE
-"\u013A": L_ACUTE
-"\u013B": L_CEDILLA
-"\u013C": L_CEDILLA
-"\u013D": L_CARON
-"\u013E": L_CARON
-"\u013F": [L_MIDDLE_DOT, L_MIDDOT]
-"\u0140": [L_MIDDLE_DOT, L_MIDDOT]
-"\u0141": L_STROKE
-"\u0142": L_STROKE
-"\u0143": N_ACUTE
-"\u0144": N_ACUTE
-"\u0145": N_CEDILLA
-"\u0146": N_CEDILLA
-"\u0147": N_CARON
-"\u0148": N_CARON
-"\u0149": APOSTROPHE_N
-"\u014A": ENG
-"\u014B": ENG
-"\u014C": O_MACRON
-"\u014D": O_MACRON
-"\u014E": O_BREVE
-"\u014F": O_BREVE
-"\u0150": O_DOUBLE_ACUTE
-"\u0151": O_DOUBLE_ACUTE
-"\u0152": OE
-"\u0153": OE
-"\u0154": R_ACUTE
-"\u0155": R_ACUTE
-"\u0156": R_CEDILLA
-"\u0157": R_CEDILLA
-"\u0158": R_CARON
-"\u0159": R_CARON
-"\u015A": S_ACUTE
-"\u015B": S_ACUTE
-"\u015C": [S_CIRCUMFLEX, S_CIRC]
-"\u015D": [S_CIRCUMFLEX, S_CIRC]
-"\u015E": S_CEDILLA
-"\u015F": S_CEDILLA
-"\u0160": S_CARON
-"\u0161": S_CARON
-"\u0162": T_CEDILLA
-"\u0163": T_CEDILLA
-"\u0164": T_CARON
-"\u0165": T_CARON
-"\u0166": T_STROKE
-"\u0167": T_STROKE
-"\u0168": U_TILDE
-"\u0169": U_TILDE
-"\u016A": U_MACRON
-"\u016B": U_MACRON
-"\u016C": U_BREVE
-"\u016D": U_BREVE
-"\u016E": U_RING
-"\u016F": U_RING
-"\u0170": U_DOUBLE_ACUTE
-"\u0171": U_DOUBLE_ACUTE
-"\u0172": [U_OGONEK, U_OGON]
-"\u0173": [U_OGONEK, U_OGON]
-"\u0174": [W_CIRCUMFLEX, W_CIRC]
-"\u0175": [W_CIRCUMFLEX, W_CIRC]
-"\u0176": [Y_CIRCUMFLEX, Y_CIRC]
-"\u0177": [Y_CIRCUMFLEX, Y_CIRC]
-"\u0178": Y_UMLAUT
-"\u0179": Z_ACUTE
-"\u017A": Z_ACUTE
-"\u017B": Z_DOT
-"\u017C": Z_DOT
-"\u017D": Z_CARON
-"\u017E": Z_CARON
-"\u017F": LONG_S
+"\u0100": A_MACRON                              # Ā
+"\u0101": A_MACRON                              # ā
+"\u0102": A_BREVE                               # Ă
+"\u0103": A_BREVE                               # ă
+"\u0104": [A_OGONEK, A_OGON]                    # Ą
+"\u0105": [A_OGONEK, A_OGON]                    # ą
+"\u0106": C_ACUTE                               # Ć
+"\u0107": C_ACUTE                               # ć
+"\u0108": [C_CIRCUMFLEX, C_CIRC]                # Ĉ
+"\u0109": [C_CIRCUMFLEX, C_CIRC]                # ĉ
+"\u010A": C_DOT                                 # Ċ
+"\u010B": C_DOT                                 # ċ
+"\u010C": C_CARON                               # Č
+"\u010D": C_CARON                               # č
+"\u010E": D_CARON                               # Ď
+"\u010F": D_CARON                               # ď
+"\u0110": D_STROKE                              # Đ
+"\u0111": D_STROKE                              # đ
+"\u0112": E_MACRON                              # Ē
+"\u0113": E_MACRON                              # ē
+"\u0114": E_BREVE                               # Ĕ
+"\u0115": E_BREVE                               # ĕ
+"\u0116": E_DOT                                 # Ė
+"\u0117": E_DOT                                 # ė
+"\u0118": [E_OGONEK, E_OGON]                    # Ę
+"\u0119": [E_OGONEK, E_OGON]                    # ę
+"\u011A": E_CARON                               # Ě
+"\u011B": E_CARON                               # ě
+"\u011C": [E_CIRCUMFLEX, E_CIRC]                # Ĝ
+"\u011D": [E_CIRCUMFLEX, E_CIRC]                # ĝ
+"\u011E": E_BREVE                               # Ğ
+"\u011F": E_BREVE                               # ğ
+"\u0120": G_DOT                                 # Ġ
+"\u0121": G_DOT                                 # ġ
+"\u0122": G_CEDILLA                             # Ģ
+"\u0123": G_CEDILLA                             # ģ
+"\u0124": [H_CIRCUMFLEX, H_CIRC]                # Ĥ
+"\u0125": [H_CIRCUMFLEX, H_CIRC]                # ĥ
+"\u0126": H_STROKE                              # Ħ
+"\u0127": H_STROKE                              # ħ
+"\u0128": I_TILDE                               # Ĩ
+"\u0129": I_TILDE                               # ĩ
+"\u012A": I_MACRON                              # Ī
+"\u012B": I_MACRON                              # ī
+"\u012C": I_BREVE                               # Ĭ
+"\u012D": I_BREVE                               # ĭ
+"\u012E": [I_OGONEK, I_OGON]                    # Į
+"\u012F": [I_OGONEK, I_OGON]                    # į
+"\u0130": I_DOT                                 # İ
+"\u0131": I_DOT                                 # ı
+"\u0132": IJ                                    # Ĳ
+"\u0133": IJ                                    # ĳ
+"\u0134": [J_CIRCUMFLEX, J_CIRC]                # Ĵ
+"\u0135": [J_CIRCUMFLEX, J_CIRC]                # ĵ
+"\u0136": K_CEDILLA                             # Ķ
+"\u0137": K_CEDILLA                             # ķ
+"\u0138": KRA                                   # ĸ
+"\u0139": L_ACUTE                               # Ĺ
+"\u013A": L_ACUTE                               # ĺ
+"\u013B": L_CEDILLA                             # Ļ
+"\u013C": L_CEDILLA                             # ļ
+"\u013D": L_CARON                               # Ľ
+"\u013E": L_CARON                               # ľ
+"\u013F": [L_MIDDLE_DOT, L_MIDDOT]              # Ŀ
+"\u0140": [L_MIDDLE_DOT, L_MIDDOT]              # ŀ
+"\u0141": L_STROKE                              # Ł
+"\u0142": L_STROKE                              # ł
+"\u0143": N_ACUTE                               # Ń
+"\u0144": N_ACUTE                               # ń
+"\u0145": N_CEDILLA                             # Ņ
+"\u0146": N_CEDILLA                             # ņ
+"\u0147": N_CARON                               # Ň
+"\u0148": N_CARON                               # ň
+"\u0149": APOSTROPHE_N                          # ŉ
+"\u014A": ENG                                   # Ŋ
+"\u014B": ENG                                   # ŋ
+"\u014C": O_MACRON                              # Ō
+"\u014D": O_MACRON                              # ō
+"\u014E": O_BREVE                               # Ŏ
+"\u014F": O_BREVE                               # ŏ
+"\u0150": O_DOUBLE_ACUTE                        # Ő
+"\u0151": O_DOUBLE_ACUTE                        # ő
+"\u0152": OE                                    # Œ
+"\u0153": OE                                    # œ
+"\u0154": R_ACUTE                               # Ŕ
+"\u0155": R_ACUTE                               # ŕ
+"\u0156": R_CEDILLA                             # Ŗ
+"\u0157": R_CEDILLA                             # ŗ
+"\u0158": R_CARON                               # Ř
+"\u0159": R_CARON                               # ř
+"\u015A": S_ACUTE                               # Ś
+"\u015B": S_ACUTE                               # ś
+"\u015C": [S_CIRCUMFLEX, S_CIRC]                # Ŝ
+"\u015D": [S_CIRCUMFLEX, S_CIRC]                # ŝ
+"\u015E": S_CEDILLA                             # Ş
+"\u015F": S_CEDILLA                             # ş
+"\u0160": S_CARON                               # Š
+"\u0161": S_CARON                               # š
+"\u0162": T_CEDILLA                             # Ţ
+"\u0163": T_CEDILLA                             # ţ
+"\u0164": T_CARON                               # Ť
+"\u0165": T_CARON                               # ť
+"\u0166": T_STROKE                              # Ŧ
+"\u0167": T_STROKE                              # ŧ
+"\u0168": U_TILDE                               # Ũ
+"\u0169": U_TILDE                               # ũ
+"\u016A": U_MACRON                              # Ū
+"\u016B": U_MACRON                              # ū
+"\u016C": U_BREVE                               # Ŭ
+"\u016D": U_BREVE                               # ŭ
+"\u016E": U_RING                                # Ů
+"\u016F": U_RING                                # ů
+"\u0170": U_DOUBLE_ACUTE                        # Ű
+"\u0171": U_DOUBLE_ACUTE                        # ű
+"\u0172": [U_OGONEK, U_OGON]                    # Ų
+"\u0173": [U_OGONEK, U_OGON]                    # ų
+"\u0174": [W_CIRCUMFLEX, W_CIRC]                # Ŵ
+"\u0175": [W_CIRCUMFLEX, W_CIRC]                # ŵ
+"\u0176": [Y_CIRCUMFLEX, Y_CIRC]                # Ŷ
+"\u0177": [Y_CIRCUMFLEX, Y_CIRC]                # ŷ
+"\u0178": Y_UMLAUT                              # Ÿ
+"\u0179": Z_ACUTE                               # Ź
+"\u017A": Z_ACUTE                               # ź
+"\u017B": Z_DOT                                 # Ż
+"\u017C": Z_DOT                                 # ż
+"\u017D": Z_CARON                               # Ž
+"\u017E": Z_CARON                               # ž
+"\u017F": LONG_S                                # ſ
 
 # Latin Extended-B
 # TODO
@@ -342,86 +342,86 @@ z: Z
 # TODO
 
 # Spacing Modifier Letters
-"\u02B0": MODIFIER_SMALL_H
-"\u02B1": MODIFIER_SMALL_H_HOOK
-"\u02B2": MODIFIER_SMALL_J
-"\u02B3": MODIFIER_SMALL_R
-"\u02B4": MODIFIER_SMALL_TURNED_R
-"\u02B5": MODIFIER_SMALL_TURNED_R_HOOK
-"\u02B6": MODIFIER_SMALL_CAPITAL_INVERTED_R
-"\u02B7": MODIFIER_SMALL_W
-"\u02B8": MODIFIER_SMALL_Y
-"\u02B9": MODIFIER_PRIME
-"\u02BA": MODIFIER_DOUBLE_PRIME
-"\u02BB": MODIFIER_TURNED_COMMA
-"\u02BC": MODIFIER_APOSTROPHE
-"\u02BD": MODIFIER_REVERSED_COMMA
-"\u02BE": MODIFIER_RIGHT_HALF_RING
-"\u02BF": MODIFIER_LEFT_HALF_RING
-"\u02C0": MODIFIER_GLOTTAL_STOP
-"\u02C1": MODIFIER_REVERSED_GLOTTAL_STOP
-"\u02C2": MODIFIER_LEFT_ARROWHEAD
-"\u02C3": MODIFIER_RIGHT_ARROWHEAD
-"\u02C4": MODIFIER_UP_ARROWHEAD
-"\u02C5": MODIFIER_DOWNARROW_HEAD
-"\u02C6": MODIFIER_CIRCUMFLEX
-"\u02C7": CARON
-"\u02C8": MODIFIER_VERTICAL_LINE
-"\u02C9": MODIFIER_MACRON
-"\u02CA": MODIFIER_ACUTE
-"\u02CB": MODIFIER_GRAVE
-"\u02CC": MODIFIER_LOW_VERTICAL_LINE
-"\u02CD": MODIFIER_LOW_MACRON
-"\u02CE": MODIFIER_LOW_GRAVE
-"\u02CF": MODIFIER_LOW_ACUTE
-"\u02D0": MODIFIER_TRIANGULAR_COLON
-"\u02D1": MODIFIER_HALF_TRIANGULAR_COLON
-"\u02D2": MODIFIER_CENTERED_RIGHT_HALF_RING
-"\u02D3": MODIFIER_CENTERED_LEFT_HALF_RING
-"\u02D4": MODIFIER_UP_TACK
-"\u02D5": MODIFIER_DOWN_TACK
-"\u02D6": MODIFIER_PLUS
-"\u02D7": MODIFIER_MINUS
-"\u02D8": BREVE
-"\u02D9": DOT_ABOVE
-"\u02DA": RING_ABOVE
-"\u02DB": OGONEK
-"\u02DC": SMALL_TILDE
-"\u02DD": DOUBLE_ACUTE
-"\u02DE": MODIFIER_RHOTIC_HOOK
-"\u02DF": MODIFIER_CROSS_ACCENT
-"\u02E0": MODIFIER_SMALL_GAMMA
-"\u02E1": MODIFIER_SMALL_L
-"\u02E2": MODIFIER_SMALL_S
-"\u02E3": MODIFIER_SMALL_X
-"\u02E4": MODIFIER_SMALL_REVERSED_GLOTTAL_STOP
-"\u02E5": MODIFIER_EXTRA_HIGH_TONE_BAR
-"\u02E6": MODIFIER_HIGH_TONE_BAR
-"\u02E7": MODIFIER_MID_TONE_BAR
-"\u02E8": MODIFIER_LOW_TONE_BAR
-"\u02E9": MODIFIER_EXTRA_LOW_TONE_BAR
-"\u02EA": MODIFIER_YIN_DEPARTING_TONE
-"\u02EB": MODIFIER_YANG_DEPARTING_TONE
-"\u02EC": MODIFIER_VOICING
-"\u02ED": MODIFIER_UNASPIRATED
-"\u02EE": MODIFIER_DOUBLE_APOSTROPHE
-"\u02EF": MODIFIER_LOW_DOWN_ARROWHEAd
-"\u02F0": MODIFIER_LOW_UP_ARROW_HEAD
-"\u02F1": MODIFIER_LOW_LEFT_ARROW_HEAD
-"\u02F2": MODIFIER_LOW_RIGHT_ARROW_HEAD
-"\u02F3": MODIFIER_LOW_RING
-"\u02F4": MODIFIER_MIDDLE_GRAVE
-"\u02F5": MODIFIER_MIDDLE_DOUBLE_GRAVE
-"\u02F6": MODIFIER_MIDDLE_DOUBLE_ACUTE
-"\u02F7": MODIFIER_LOW_TILDE
-"\u02F8": MODIFIER_RAISED_COLON
-"\u02F9": MODIFIER_BEGIN_HIGH_TONE
-"\u02FA": MODIFIER_END_HIGH_TONE
-"\u02FB": MODIFIER_BEGIN_LOW_TONE
-"\u02FC": MODIFIER_END_LOW_TONE
-"\u02FD": MODIFIER_SHELF
-"\u02FE": MODIFIER_OPEN_SHELF
-"\u02FF": MODIFIER_LOW_LEFT_ARROW
+"\u02B0": MODIFIER_SMALL_H                      # ʰ
+"\u02B1": MODIFIER_SMALL_H_HOOK                 # ʱ
+"\u02B2": MODIFIER_SMALL_J                      # ʲ
+"\u02B3": MODIFIER_SMALL_R                      # ʳ
+"\u02B4": MODIFIER_SMALL_TURNED_R               # ʴ
+"\u02B5": MODIFIER_SMALL_TURNED_R_HOOK          # ʵ
+"\u02B6": MODIFIER_SMALL_CAPITAL_INVERTED_R     # ʶ
+"\u02B7": MODIFIER_SMALL_W                      # ʷ
+"\u02B8": MODIFIER_SMALL_Y                      # ʸ
+"\u02B9": MODIFIER_PRIME                        # ʹ
+"\u02BA": MODIFIER_DOUBLE_PRIME                 # ʺ
+"\u02BB": MODIFIER_TURNED_COMMA                 # ʻ
+"\u02BC": MODIFIER_APOSTROPHE                   # ʼ
+"\u02BD": MODIFIER_REVERSED_COMMA               # ʽ
+"\u02BE": MODIFIER_RIGHT_HALF_RING              # ʾ
+"\u02BF": MODIFIER_LEFT_HALF_RING               # ʿ
+"\u02C0": MODIFIER_GLOTTAL_STOP                 # ˀ
+"\u02C1": MODIFIER_REVERSED_GLOTTAL_STOP        # ˁ
+"\u02C2": MODIFIER_LEFT_ARROWHEAD               # ˂
+"\u02C3": MODIFIER_RIGHT_ARROWHEAD              # ˃
+"\u02C4": MODIFIER_UP_ARROWHEAD                 # ˄
+"\u02C5": MODIFIER_DOWNARROW_HEAD               # ˅
+"\u02C6": MODIFIER_CIRCUMFLEX                   # ˆ
+"\u02C7": CARON                                 # ˇ
+"\u02C8": MODIFIER_VERTICAL_LINE                # ˈ
+"\u02C9": MODIFIER_MACRON                       # ˉ
+"\u02CA": MODIFIER_ACUTE                        # ˊ
+"\u02CB": MODIFIER_GRAVE                        # ˋ
+"\u02CC": MODIFIER_LOW_VERTICAL_LINE            # ˌ
+"\u02CD": MODIFIER_LOW_MACRON                   # ˍ
+"\u02CE": MODIFIER_LOW_GRAVE                    # ˎ
+"\u02CF": MODIFIER_LOW_ACUTE                    # ˏ
+"\u02D0": MODIFIER_TRIANGULAR_COLON             # ː
+"\u02D1": MODIFIER_HALF_TRIANGULAR_COLON        # ˑ
+"\u02D2": MODIFIER_CENTERED_RIGHT_HALF_RING     # ˒
+"\u02D3": MODIFIER_CENTERED_LEFT_HALF_RING      # ˓
+"\u02D4": MODIFIER_UP_TACK                      # ˔
+"\u02D5": MODIFIER_DOWN_TACK                    # ˕
+"\u02D6": MODIFIER_PLUS                         # ˖
+"\u02D7": MODIFIER_MINUS                        # ˗
+"\u02D8": BREVE                                 # ˘
+"\u02D9": DOT_ABOVE                             # ˙
+"\u02DA": RING_ABOVE                            # ˚
+"\u02DB": OGONEK                                # ˛
+"\u02DC": SMALL_TILDE                           # ˜
+"\u02DD": DOUBLE_ACUTE                          # ˝
+"\u02DE": MODIFIER_RHOTIC_HOOK                  # ˞
+"\u02DF": MODIFIER_CROSS_ACCENT                 # ˟
+"\u02E0": MODIFIER_SMALL_GAMMA                  # ˠ
+"\u02E1": MODIFIER_SMALL_L                      # ˡ
+"\u02E2": MODIFIER_SMALL_S                      # ˢ
+"\u02E3": MODIFIER_SMALL_X                      # ˣ
+"\u02E4": MODIFIER_SMALL_REVERSED_GLOTTAL_STOP  # ˤ
+"\u02E5": MODIFIER_EXTRA_HIGH_TONE_BAR          # ˥
+"\u02E6": MODIFIER_HIGH_TONE_BAR                # ˦
+"\u02E7": MODIFIER_MID_TONE_BAR                 # ˧
+"\u02E8": MODIFIER_LOW_TONE_BAR                 # ˨
+"\u02E9": MODIFIER_EXTRA_LOW_TONE_BAR           # ˩
+"\u02EA": MODIFIER_YIN_DEPARTING_TONE           # ˪
+"\u02EB": MODIFIER_YANG_DEPARTING_TONE          # ˫
+"\u02EC": MODIFIER_VOICING                      # ˬ
+"\u02ED": MODIFIER_UNASPIRATED                  # ˭
+"\u02EE": MODIFIER_DOUBLE_APOSTROPHE            # ˮ
+"\u02EF": MODIFIER_LOW_DOWN_ARROWHEAd           # ˯
+"\u02F0": MODIFIER_LOW_UP_ARROW_HEAD            # ˰
+"\u02F1": MODIFIER_LOW_LEFT_ARROW_HEAD          # ˱
+"\u02F2": MODIFIER_LOW_RIGHT_ARROW_HEAD         # ˲
+"\u02F3": MODIFIER_LOW_RING                     # ˳
+"\u02F4": MODIFIER_MIDDLE_GRAVE                 # ˴
+"\u02F5": MODIFIER_MIDDLE_DOUBLE_GRAVE          # ˵
+"\u02F6": MODIFIER_MIDDLE_DOUBLE_ACUTE          # ˶
+"\u02F7": MODIFIER_LOW_TILDE                    # ˷
+"\u02F8": MODIFIER_RAISED_COLON                 # ˸
+"\u02F9": MODIFIER_BEGIN_HIGH_TONE              # ˹
+"\u02FA": MODIFIER_END_HIGH_TONE                # ˺
+"\u02FB": MODIFIER_BEGIN_LOW_TONE               # ˻
+"\u02FC": MODIFIER_END_LOW_TONE                 # ˼
+"\u02FD": MODIFIER_SHELF                        # ˽
+"\u02FE": MODIFIER_OPEN_SHELF                   # ˾
+"\u02FF": MODIFIER_LOW_LEFT_ARROW               # ˿
 
 # Combining Marks
 # TODO
@@ -433,361 +433,361 @@ z: Z
 # TODO
 
 # Cyrillic
-"\u0400": CYRILLIC_IE_GRAVE
-"\u0401": CYRILLIC_IO
-"\u0402": CYRILLIC_DJE
-"\u0403": CYRILLIC_GJE
-"\u0404": UKRANIAN_IE
-"\u0405": CYRILLIC_DZE
-"\u0406": [BYELORUSSIAN_I, UKRANIAN_I]
-"\u0407": CYRILLIC_YI
-"\u0408": CYRILLIC_JE
-"\u0409": CYRILLIC_LJE
-"\u040A": CYRILLIC_NJE
-"\u040B": CYRILLIC_TSHE
-"\u040C": CYRILLIC_KJE
-"\u040D": CYRILLIC_I_GRAVE
-"\u040E": CYRILLIC_SHORT_U
-"\u040F": CYRILLIC_DZHE
-"\u0410": CYRILLIC_A
-"\u0411": CYRILLIC_BE
-"\u0412": CYRILLIC_VE
-"\u0413": CYRILLIC_GHE
-"\u0414": CYRILLIC_DE
-"\u0415": CYRILLIC_IE
-"\u0416": CYRILLIC_ZHE
-"\u0417": CYRILLIC_ZE
-"\u0418": CYRILLIC_I
-"\u0419": CYRILLIC_SHORT_I
-"\u041A": CYRILLIC_KA
-"\u041B": CYRILLIC_EL
-"\u041C": CYRILLIC_EM
-"\u041D": CYRILLIC_EN
-"\u041E": CYRILLIC_O
-"\u041F": CYRILLIC_PE
-"\u0420": CYRILLIC_ER
-"\u0421": CYRILLIC_ES
-"\u0422": CYRILLIC_TE
-"\u0423": CYRILLIC_U
-"\u0424": CYRILLIC_EF
-"\u0425": CYRILLIC_HA
-"\u0426": CYRILLIC_TSE
-"\u0427": CYRILLIC_CHE
-"\u0428": CYRILLIC_SHA
-"\u0429": CYRILLIC_SHCHA
-"\u042A": CYRILLIC_HARD_SIGN
-"\u042B": CYRILLIC_YERU
-"\u042C": CYRILLIC_SOFT_SIGN
-"\u042D": CYRILLIC_E
-"\u042E": CYRILLIC_YU
-"\u042F": CYRILLIC_YA
-"\u0430": CYRILLIC_A
-"\u0431": CYRILLIC_BE
-"\u0432": CYRILLIC_VE
-"\u0433": CYRILLIC_GHE
-"\u0434": CYRILLIC_DE
-"\u0435": CYRILLIC_IE
-"\u0436": CYRILLIC_ZHE
-"\u0437": CYRILLIC_ZE
-"\u0438": CYRILLIC_I
-"\u0439": CYRILLIC_SHORT_I
-"\u043A": CYRILLIC_KA
-"\u043B": CYRILLIC_EL
-"\u043C": CYRILLIC_EM
-"\u043D": CYRILLIC_EN
-"\u043E": CYRILLIC_O
-"\u043F": CYRILLIC_PE
-"\u0440": CYRILLIC_ER
-"\u0441": CYRILLIC_ES
-"\u0442": CYRILLIC_TE
-"\u0443": CYRILLIC_U
-"\u0444": CYRILLIC_EF
-"\u0445": CYRILLIC_HA
-"\u0446": CYRILLIC_TSE
-"\u0447": CYRILLIC_CHE
-"\u0448": CYRILLIC_SHA
-"\u0449": CYRILLIC_SHCHA
-"\u044A": CYRILLIC_HARD_SIGN
-"\u044B": CYRILLIC_YERU
-"\u044C": CYRILLIC_SOFT_SIGN
-"\u044D": CYRILLIC_E
-"\u044E": CYRILLIC_YU
-"\u044F": CYRILLIC_YA
-"\u0450": CYRILLIC_IE_GRAVE
-"\u0451": CYRILLIC_IO
-"\u0452": CYRILLIC_DJE
-"\u0453": CYRILLIC_GJE
-"\u0454": UKRAINIAN_IE
-"\u0455": CYRILLIC_DZE
-"\u0456": [BYELORUSSIAN_I, UKRANIAN_I]
-"\u0457": CYRILLIC_YI
-"\u0458": CYRILLIC_JE
-"\u0459": CYRILLIC_LJE
-"\u045A": CYRILLIC_NJE
-"\u045B": CYRILLIC_TSHE
-"\u045C": CYRILLIC_KJE
-"\u045D": CYRILLIC_I_GRAVE
-"\u045E": CYRILLIC_SHORT_U
-"\u045F": CYRILLIC_DZHE
-"\u0460": CYRILLIC_OMEGA
-"\u0461": CYRILLIC_OMEGA
-"\u0462": CYRILLIC_YAT
-"\u0463": CYRILLIC_YAT
-"\u0464": CYRILLIC_E_IOTA
-"\u0465": CYRILLIC_E_IOTA
-"\u0466": CYRILLIC_LITTLE_YUS
-"\u0467": CYRILLIC_LITTLE_YUS
-"\u0468": CYRILLIC_LITTLE_YUS_IOTA
-"\u0469": CYRILLIC_LITTLE_YUS_IOTA
-"\u046A": CYRILLIC_BIG_YUS
-"\u046B": CYRILLIC_BIG_YUS
-"\u046C": CYRILLIC_BIG_YUS_IOTA
-"\u046D": CYRILLIC_BIG_YUS_IOTA
-"\u046E": CYRILLIC_KSI
-"\u046F": CYRILLIC_KSI
-"\u0470": CYRILLIC_PSI
-"\u0471": CYRILLIC_PSI
-"\u0472": CYRILLIC_FITA
-"\u0473": CYRILLIC_FITA
-"\u0474": CYRILLIC_IZHITSA
-"\u0475": CYRILLIC_IZHITSA
-"\u0476": CYRILLIC_IZHITSA_DOUBLE_GRAVE
-"\u0477": CYRILLIC_IZHITSA_DOUBLE_GRAVE
-"\u0478": CYRILLIC_UK
-"\u0479": CYRILLIC_UK
-"\u047A": CYRILLIC_ROUND_OMEGA
-"\u047B": CYRILLIC_ROUND_OMEGA
-"\u047C": CYRILLIC_OMEGA_TITLO
-"\u047D": CYRILLIC_OMEGA_TITLO
-"\u047E": CYRILLIC_OT
-"\u047F": CYRILLIC_OT
-"\u0480": CYRILLIC_KOPPA
-"\u0481": CYRILLIC_KOPPA
-"\u0482": CYRILLIC_THOUSANDS_SIGN
-"\u0483": CYRILLIC_COMBINING_TITLO
-"\u048A": CYRILLIC_SHORT_I_TAIL
-"\u048B": CYRILLIC_SHORT_I_TAIL
-"\u048C": CYRILLIC_SEMISOFT_SIGN
-"\u048D": CYRILLIC_SEMISOFT_SIGN
-"\u048E": CYRILLIC_ER_TICK
-"\u048F": CYRILLIC_ER_TICK
-"\u0490": CYRILLIC_GHE_UPTURN
-"\u0491": CYRILLIC_GHE_UPTURN
-"\u0492": CYRILLIC_GHE_STROKE
-"\u0493": CYRILLIC_GHE_STROKE
-"\u0494": CYRILLIC_GHE_MIDDLE_HOOK
-"\u0495": CYRILLIC_GHE_MIDDLE_HOOK
-"\u0496": CYRILLIC_ZHE_DESCENDER
-"\u0497": CYRILLIC_ZHE_DESCENDER
-"\u0498": CYRILLIC_ZE_DESCENDER
-"\u0499": CYRILLIC_ZE_DESCENDER
-"\u049A": CYRILLIC_KA_DESCENDER
-"\u049B": CYRILLIC_KA_DESCENDER
-"\u049C": CYRILLIC_KA_VERTICAL_STROKE
-"\u049D": CYRILLIC_KA_VERTICAL_STROKE
-"\u049E": CYRILLIC_KA_STROKE
-"\u049F": CYRILLIC_KA_STROKE
-"\u04A0": BASHKIR_KA
-"\u04A1": BASHKIR_KA
-"\u04A2": CYRILLIC_EN_DESCENDER
-"\u04A3": CYRILLIC_EN_DESCENDER
-"\u04A4": CYRILLIC_EN_GHE
-"\u04A5": CYRILLIC_EN_GHE
-"\u04A6": CYRILLIC_PE_MIDDLE_HOOK
-"\u04A7": CYRILLIC_PE_MIDDLE_HOOK
-"\u04A8": ABKHAZIAN_HA
-"\u04A9": ABKHAZIAN_HA
-"\u04AA": CYRILLIC_ES_DESCENDER
-"\u04AB": CYRILLIC_ES_DESCENDER
-"\u04AC": CYRILLIC_TE_DESCENDER
-"\u04AD": CYRILLIC_TE_DESCENDER
-"\u04AE": CYRILLIC_STRAIGHT_U
-"\u04AF": CYRILLIC_STRAIGHT_U
-"\u04B0": CYRILLIC_STRAIGHT_U_STROKE
-"\u04B1": CYRILLIC_STRAIGHT_U_STROKE
-"\u04B2": CYRILLIC_HA_DESCENDER
-"\u04B3": CYRILLIC_HA_DESCENDER
-"\u04B4": CYRILLIC_TE_TSE
-"\u04B5": CYRILLIC_TE_TSE
-"\u04B6": CYRILLIC_CHE_DESCENDER
-"\u04B7": CYRILLIC_CHE_DESCENDER
-"\u04B8": CYRILLIC_CHE_VERTICAL_STROKE
-"\u04B9": CYRILLIC_CHE_VERTICAL_STROKE
-"\u04BA": CYRILLIC_SHHA
-"\u04BB": CYRILLIC_SHHA
-"\u04BC": ABKHAZIAN_CHE
-"\u04BD": ABKHAZIAN_CHE
-"\u04BE": ABKHAZIAN_CHE_DESCENDER
-"\u04BF": ABKHAZIAN_CHE_DESCENDER
-"\u04C0": CYRILLIC_PALOCHKA
-"\u04C1": CYRILLIC_ZHE_BREVE
-"\u04C2": CYRILLIC_ZHE_BREVE
-"\u04C3": CYRILLIC_KA_HOOK
-"\u04C4": CYRILLIC_KA_HOOK
-"\u04C5": CYRILLIC_EL_TAIL
-"\u04C6": CYRILLIC_EL_TAIL
-"\u04C7": CYRILLIC_EN_HOOK
-"\u04C8": CYRILLIC_EN_HOOK
-"\u04C9": CYRILLIC_EN_TAIL
-"\u04CA": CYRILLIC_EN_TAIL
-"\u04CB": KHAKASSIAN_CHE
-"\u04CC": KHAKASSIAN_CHE
-"\u04CD": CYRILLIC_EM_TAIL
-"\u04CE": CYRILLIC_EM_TAIL
-"\u04CF": CYRILLIC_PALOCHKA
-"\u04D0": CYRILLIC_A_BREVE
-"\u04D1": CYRILLIC_A_BREVE
-"\u04D2": CYRILLIC_A_UMLAUT
-"\u04D3": CYRILLIC_A_UMLAUT
-"\u04D4": CYRILLIC_A_IE
-"\u04D5": CYRILLIC_A_IE
-"\u04D6": CYRILLIC_IE_BREVE
-"\u04D7": CYRILLIC_IE_BREVE
-"\u04D8": CYRILLIC_SCHWA
-"\u04D9": CYRILLIC_SCHWA
-"\u04DA": CYRILLIC_SCHWA_UMLAUT
-"\u04DB": CYRILLIC_SCHWA_UMLAUT
-"\u04DC": CYRILLIC_ZHE_UMLAUT
-"\u04DD": CYRILLIC_ZHE_UMLAUT
-"\u04DE": CYRILLIC_ZE_UMLAUT
-"\u04DF": CYRILLIC_ZE_UMLAUT
-"\u04E0": ABKHAZIAN_DZE
-"\u04E1": ABKHAZIAN_DZE
-"\u04E2": CYRILLIC_I_MACRON
-"\u04E3": CYRILLIC_I_MACRON
-"\u04E4": CYRILLIC_I_UMLAUT
-"\u04E5": CYRILLIC_I_UMLAUT
-"\u04E6": CYRILLIC_O_UMLAUT
-"\u04E7": CYRILLIC_O_UMLAUT
-"\u04E8": CYRILLIC_BARRED_O
-"\u04E9": CYRILLIC_BARRED_O
-"\u04EA": CYRILLIC_BARRED_O_UMLAUT
-"\u04EB": CYRILLIC_BARRED_O_UMLAUT
-"\u04EC": CYRILLIC_E_UMLAUT
-"\u04ED": CYRILLIC_E_UMLAUT
-"\u04EE": CYRILLIC_U_MACRON
-"\u04EF": CYRILLIC_U_MACRON
-"\u04F0": CYRILLIC_U_UMLUAT
-"\u04F1": CYRILLIC_U_UMLUAT
-"\u04F2": CYRILLIC_U_DOUBLE_ACUTE
-"\u04F3": CYRILLIC_U_DOUBLE_ACUTE
-"\u04F4": CYRILLIC_CHE_UMLAUT
-"\u04F5": CYRILLIC_CHE_UMLAUT
-"\u04F6": CYRILLIC_GHE_DESCENDER
-"\u04F7": CYRILLIC_GHE_DESCENDER
-"\u04F8": CYRILLIC_YERU_UMLAUT
-"\u04F9": CYRILLIC_YERU_UMLAUT
-"\u04FA": CYRILLIC_GHE_STROKE_HOOK
-"\u04FB": CYRILLIC_GHE_STROKE_HOOK
-"\u04FC": CYRILLIC_HA_HOOK
-"\u04FD": CYRILLIC_HA_HOOK
-"\u04FE": CYRILLIC_HA_STROKE
-"\u04FF": CYRILLIC_HA_STROKE
+"\u0400": CYRILLIC_IE_GRAVE                     # Ѐ
+"\u0401": CYRILLIC_IO                           # Ё
+"\u0402": CYRILLIC_DJE                          # Ђ
+"\u0403": CYRILLIC_GJE                          # Ѓ
+"\u0404": UKRANIAN_IE                           # Є
+"\u0405": CYRILLIC_DZE                          # Ѕ
+"\u0406": [BYELORUSSIAN_I, UKRANIAN_I]          # І
+"\u0407": CYRILLIC_YI                           # Ї
+"\u0408": CYRILLIC_JE                           # Ј
+"\u0409": CYRILLIC_LJE                          # Љ
+"\u040A": CYRILLIC_NJE                          # Њ
+"\u040B": CYRILLIC_TSHE                         # Ћ
+"\u040C": CYRILLIC_KJE                          # Ќ
+"\u040D": CYRILLIC_I_GRAVE                      # Ѝ
+"\u040E": CYRILLIC_SHORT_U                      # Ў
+"\u040F": CYRILLIC_DZHE                         # Џ
+"\u0410": CYRILLIC_A                            # А
+"\u0411": CYRILLIC_BE                           # Б
+"\u0412": CYRILLIC_VE                           # В
+"\u0413": CYRILLIC_GHE                          # Г
+"\u0414": CYRILLIC_DE                           # Д
+"\u0415": CYRILLIC_IE                           # Е
+"\u0416": CYRILLIC_ZHE                          # Ж
+"\u0417": CYRILLIC_ZE                           # З
+"\u0418": CYRILLIC_I                            # И
+"\u0419": CYRILLIC_SHORT_I                      # Й
+"\u041A": CYRILLIC_KA                           # К
+"\u041B": CYRILLIC_EL                           # Л
+"\u041C": CYRILLIC_EM                           # М
+"\u041D": CYRILLIC_EN                           # Н
+"\u041E": CYRILLIC_O                            # О
+"\u041F": CYRILLIC_PE                           # П
+"\u0420": CYRILLIC_ER                           # Р
+"\u0421": CYRILLIC_ES                           # С
+"\u0422": CYRILLIC_TE                           # Т
+"\u0423": CYRILLIC_U                            # У
+"\u0424": CYRILLIC_EF                           # Ф
+"\u0425": CYRILLIC_HA                           # Х
+"\u0426": CYRILLIC_TSE                          # Ц
+"\u0427": CYRILLIC_CHE                          # Ч
+"\u0428": CYRILLIC_SHA                          # Ш
+"\u0429": CYRILLIC_SHCHA                        # Щ
+"\u042A": CYRILLIC_HARD_SIGN                    # Ъ
+"\u042B": CYRILLIC_YERU                         # Ы
+"\u042C": CYRILLIC_SOFT_SIGN                    # Ь
+"\u042D": CYRILLIC_E                            # Э
+"\u042E": CYRILLIC_YU                           # Ю
+"\u042F": CYRILLIC_YA                           # Я
+"\u0430": CYRILLIC_A                            # а
+"\u0431": CYRILLIC_BE                           # б
+"\u0432": CYRILLIC_VE                           # в
+"\u0433": CYRILLIC_GHE                          # г
+"\u0434": CYRILLIC_DE                           # д
+"\u0435": CYRILLIC_IE                           # е
+"\u0436": CYRILLIC_ZHE                          # ж
+"\u0437": CYRILLIC_ZE                           # з
+"\u0438": CYRILLIC_I                            # и
+"\u0439": CYRILLIC_SHORT_I                      # й
+"\u043A": CYRILLIC_KA                           # к
+"\u043B": CYRILLIC_EL                           # л
+"\u043C": CYRILLIC_EM                           # м
+"\u043D": CYRILLIC_EN                           # н
+"\u043E": CYRILLIC_O                            # о
+"\u043F": CYRILLIC_PE                           # п
+"\u0440": CYRILLIC_ER                           # р
+"\u0441": CYRILLIC_ES                           # с
+"\u0442": CYRILLIC_TE                           # т
+"\u0443": CYRILLIC_U                            # у
+"\u0444": CYRILLIC_EF                           # ф
+"\u0445": CYRILLIC_HA                           # х
+"\u0446": CYRILLIC_TSE                          # ц
+"\u0447": CYRILLIC_CHE                          # ч
+"\u0448": CYRILLIC_SHA                          # ш
+"\u0449": CYRILLIC_SHCHA                        # щ
+"\u044A": CYRILLIC_HARD_SIGN                    # ъ
+"\u044B": CYRILLIC_YERU                         # ы
+"\u044C": CYRILLIC_SOFT_SIGN                    # ь
+"\u044D": CYRILLIC_E                            # э
+"\u044E": CYRILLIC_YU                           # ю
+"\u044F": CYRILLIC_YA                           # я
+"\u0450": CYRILLIC_IE_GRAVE                     # ѐ
+"\u0451": CYRILLIC_IO                           # ё
+"\u0452": CYRILLIC_DJE                          # ђ
+"\u0453": CYRILLIC_GJE                          # ѓ
+"\u0454": UKRAINIAN_IE                          # є
+"\u0455": CYRILLIC_DZE                          # ѕ
+"\u0456": [BYELORUSSIAN_I, UKRANIAN_I]          # і
+"\u0457": CYRILLIC_YI                           # ї
+"\u0458": CYRILLIC_JE                           # ј
+"\u0459": CYRILLIC_LJE                          # љ
+"\u045A": CYRILLIC_NJE                          # њ
+"\u045B": CYRILLIC_TSHE                         # ћ
+"\u045C": CYRILLIC_KJE                          # ќ
+"\u045D": CYRILLIC_I_GRAVE                      # ѝ
+"\u045E": CYRILLIC_SHORT_U                      # ў
+"\u045F": CYRILLIC_DZHE                         # џ
+"\u0460": CYRILLIC_OMEGA                        # Ѡ
+"\u0461": CYRILLIC_OMEGA                        # ѡ
+"\u0462": CYRILLIC_YAT                          # Ѣ
+"\u0463": CYRILLIC_YAT                          # ѣ
+"\u0464": CYRILLIC_E_IOTA                       # Ѥ
+"\u0465": CYRILLIC_E_IOTA                       # ѥ
+"\u0466": CYRILLIC_LITTLE_YUS                   # Ѧ
+"\u0467": CYRILLIC_LITTLE_YUS                   # ѧ
+"\u0468": CYRILLIC_LITTLE_YUS_IOTA              # Ѩ
+"\u0469": CYRILLIC_LITTLE_YUS_IOTA              # ѩ
+"\u046A": CYRILLIC_BIG_YUS                      # Ѫ
+"\u046B": CYRILLIC_BIG_YUS                      # ѫ
+"\u046C": CYRILLIC_BIG_YUS_IOTA                 # Ѭ
+"\u046D": CYRILLIC_BIG_YUS_IOTA                 # ѭ
+"\u046E": CYRILLIC_KSI                          # Ѯ
+"\u046F": CYRILLIC_KSI                          # ѯ
+"\u0470": CYRILLIC_PSI                          # Ѱ
+"\u0471": CYRILLIC_PSI                          # ѱ
+"\u0472": CYRILLIC_FITA                         # Ѳ
+"\u0473": CYRILLIC_FITA                         # ѳ
+"\u0474": CYRILLIC_IZHITSA                      # Ѵ
+"\u0475": CYRILLIC_IZHITSA                      # ѵ
+"\u0476": CYRILLIC_IZHITSA_DOUBLE_GRAVE         # Ѷ
+"\u0477": CYRILLIC_IZHITSA_DOUBLE_GRAVE         # ѷ
+"\u0478": CYRILLIC_UK                           # Ѹ
+"\u0479": CYRILLIC_UK                           # ѹ
+"\u047A": CYRILLIC_ROUND_OMEGA                  # Ѻ
+"\u047B": CYRILLIC_ROUND_OMEGA                  # ѻ
+"\u047C": CYRILLIC_OMEGA_TITLO                  # Ѽ
+"\u047D": CYRILLIC_OMEGA_TITLO                  # ѽ
+"\u047E": CYRILLIC_OT                           # Ѿ
+"\u047F": CYRILLIC_OT                           # ѿ
+"\u0480": CYRILLIC_KOPPA                        # Ҁ
+"\u0481": CYRILLIC_KOPPA                        # ҁ
+"\u0482": CYRILLIC_THOUSANDS_SIGN               # ҂
+"\u0483": CYRILLIC_COMBINING_TITLO              # ҃
+"\u048A": CYRILLIC_SHORT_I_TAIL                 # Ҋ
+"\u048B": CYRILLIC_SHORT_I_TAIL                 # ҋ
+"\u048C": CYRILLIC_SEMISOFT_SIGN                # Ҍ
+"\u048D": CYRILLIC_SEMISOFT_SIGN                # ҍ
+"\u048E": CYRILLIC_ER_TICK                      # Ҏ
+"\u048F": CYRILLIC_ER_TICK                      # ҏ
+"\u0490": CYRILLIC_GHE_UPTURN                   # Ґ
+"\u0491": CYRILLIC_GHE_UPTURN                   # ґ
+"\u0492": CYRILLIC_GHE_STROKE                   # Ғ
+"\u0493": CYRILLIC_GHE_STROKE                   # ғ
+"\u0494": CYRILLIC_GHE_MIDDLE_HOOK              # Ҕ
+"\u0495": CYRILLIC_GHE_MIDDLE_HOOK              # ҕ
+"\u0496": CYRILLIC_ZHE_DESCENDER                # Җ
+"\u0497": CYRILLIC_ZHE_DESCENDER                # җ
+"\u0498": CYRILLIC_ZE_DESCENDER                 # Ҙ
+"\u0499": CYRILLIC_ZE_DESCENDER                 # ҙ
+"\u049A": CYRILLIC_KA_DESCENDER                 # Қ
+"\u049B": CYRILLIC_KA_DESCENDER                 # қ
+"\u049C": CYRILLIC_KA_VERTICAL_STROKE           # Ҝ
+"\u049D": CYRILLIC_KA_VERTICAL_STROKE           # ҝ
+"\u049E": CYRILLIC_KA_STROKE                    # Ҟ
+"\u049F": CYRILLIC_KA_STROKE                    # ҟ
+"\u04A0": BASHKIR_KA                            # Ҡ
+"\u04A1": BASHKIR_KA                            # ҡ
+"\u04A2": CYRILLIC_EN_DESCENDER                 # Ң
+"\u04A3": CYRILLIC_EN_DESCENDER                 # ң
+"\u04A4": CYRILLIC_EN_GHE                       # Ҥ
+"\u04A5": CYRILLIC_EN_GHE                       # ҥ
+"\u04A6": CYRILLIC_PE_MIDDLE_HOOK               # Ҧ
+"\u04A7": CYRILLIC_PE_MIDDLE_HOOK               # ҧ
+"\u04A8": ABKHAZIAN_HA                          # Ҩ
+"\u04A9": ABKHAZIAN_HA                          # ҩ
+"\u04AA": CYRILLIC_ES_DESCENDER                 # Ҫ
+"\u04AB": CYRILLIC_ES_DESCENDER                 # ҫ
+"\u04AC": CYRILLIC_TE_DESCENDER                 # Ҭ
+"\u04AD": CYRILLIC_TE_DESCENDER                 # ҭ
+"\u04AE": CYRILLIC_STRAIGHT_U                   # Ү
+"\u04AF": CYRILLIC_STRAIGHT_U                   # ү
+"\u04B0": CYRILLIC_STRAIGHT_U_STROKE            # Ұ
+"\u04B1": CYRILLIC_STRAIGHT_U_STROKE            # ұ
+"\u04B2": CYRILLIC_HA_DESCENDER                 # Ҳ
+"\u04B3": CYRILLIC_HA_DESCENDER                 # ҳ
+"\u04B4": CYRILLIC_TE_TSE                       # Ҵ
+"\u04B5": CYRILLIC_TE_TSE                       # ҵ
+"\u04B6": CYRILLIC_CHE_DESCENDER                # Ҷ
+"\u04B7": CYRILLIC_CHE_DESCENDER                # ҷ
+"\u04B8": CYRILLIC_CHE_VERTICAL_STROKE          # Ҹ
+"\u04B9": CYRILLIC_CHE_VERTICAL_STROKE          # ҹ
+"\u04BA": CYRILLIC_SHHA                         # Һ
+"\u04BB": CYRILLIC_SHHA                         # һ
+"\u04BC": ABKHAZIAN_CHE                         # Ҽ
+"\u04BD": ABKHAZIAN_CHE                         # ҽ
+"\u04BE": ABKHAZIAN_CHE_DESCENDER               # Ҿ
+"\u04BF": ABKHAZIAN_CHE_DESCENDER               # ҿ
+"\u04C0": CYRILLIC_PALOCHKA                     # Ӏ
+"\u04C1": CYRILLIC_ZHE_BREVE                    # Ӂ
+"\u04C2": CYRILLIC_ZHE_BREVE                    # ӂ
+"\u04C3": CYRILLIC_KA_HOOK                      # Ӄ
+"\u04C4": CYRILLIC_KA_HOOK                      # ӄ
+"\u04C5": CYRILLIC_EL_TAIL                      # Ӆ
+"\u04C6": CYRILLIC_EL_TAIL                      # ӆ
+"\u04C7": CYRILLIC_EN_HOOK                      # Ӈ
+"\u04C8": CYRILLIC_EN_HOOK                      # ӈ
+"\u04C9": CYRILLIC_EN_TAIL                      # Ӊ
+"\u04CA": CYRILLIC_EN_TAIL                      # ӊ
+"\u04CB": KHAKASSIAN_CHE                        # Ӌ
+"\u04CC": KHAKASSIAN_CHE                        # ӌ
+"\u04CD": CYRILLIC_EM_TAIL                      # Ӎ
+"\u04CE": CYRILLIC_EM_TAIL                      # ӎ
+"\u04CF": CYRILLIC_PALOCHKA                     # ӏ
+"\u04D0": CYRILLIC_A_BREVE                      # Ӑ
+"\u04D1": CYRILLIC_A_BREVE                      # ӑ
+"\u04D2": CYRILLIC_A_UMLAUT                     # Ӓ
+"\u04D3": CYRILLIC_A_UMLAUT                     # ӓ
+"\u04D4": CYRILLIC_A_IE                         # Ӕ
+"\u04D5": CYRILLIC_A_IE                         # ӕ
+"\u04D6": CYRILLIC_IE_BREVE                     # Ӗ
+"\u04D7": CYRILLIC_IE_BREVE                     # ӗ
+"\u04D8": CYRILLIC_SCHWA                        # Ә
+"\u04D9": CYRILLIC_SCHWA                        # ә
+"\u04DA": CYRILLIC_SCHWA_UMLAUT                 # Ӛ
+"\u04DB": CYRILLIC_SCHWA_UMLAUT                 # ӛ
+"\u04DC": CYRILLIC_ZHE_UMLAUT                   # Ӝ
+"\u04DD": CYRILLIC_ZHE_UMLAUT                   # ӝ
+"\u04DE": CYRILLIC_ZE_UMLAUT                    # Ӟ
+"\u04DF": CYRILLIC_ZE_UMLAUT                    # ӟ
+"\u04E0": ABKHAZIAN_DZE                         # Ӡ
+"\u04E1": ABKHAZIAN_DZE                         # ӡ
+"\u04E2": CYRILLIC_I_MACRON                     # Ӣ
+"\u04E3": CYRILLIC_I_MACRON                     # ӣ
+"\u04E4": CYRILLIC_I_UMLAUT                     # Ӥ
+"\u04E5": CYRILLIC_I_UMLAUT                     # ӥ
+"\u04E6": CYRILLIC_O_UMLAUT                     # Ӧ
+"\u04E7": CYRILLIC_O_UMLAUT                     # ӧ
+"\u04E8": CYRILLIC_BARRED_O                     # Ө
+"\u04E9": CYRILLIC_BARRED_O                     # ө
+"\u04EA": CYRILLIC_BARRED_O_UMLAUT              # Ӫ
+"\u04EB": CYRILLIC_BARRED_O_UMLAUT              # ӫ
+"\u04EC": CYRILLIC_E_UMLAUT                     # Ӭ
+"\u04ED": CYRILLIC_E_UMLAUT                     # ӭ
+"\u04EE": CYRILLIC_U_MACRON                     # Ӯ
+"\u04EF": CYRILLIC_U_MACRON                     # ӯ
+"\u04F0": CYRILLIC_U_UMLUAT                     # Ӱ
+"\u04F1": CYRILLIC_U_UMLUAT                     # ӱ
+"\u04F2": CYRILLIC_U_DOUBLE_ACUTE               # Ӳ
+"\u04F3": CYRILLIC_U_DOUBLE_ACUTE               # ӳ
+"\u04F4": CYRILLIC_CHE_UMLAUT                   # Ӵ
+"\u04F5": CYRILLIC_CHE_UMLAUT                   # ӵ
+"\u04F6": CYRILLIC_GHE_DESCENDER                # Ӷ
+"\u04F7": CYRILLIC_GHE_DESCENDER                # ӷ
+"\u04F8": CYRILLIC_YERU_UMLAUT                  # Ӹ
+"\u04F9": CYRILLIC_YERU_UMLAUT                  # ӹ
+"\u04FA": CYRILLIC_GHE_STROKE_HOOK              # Ӻ
+"\u04FB": CYRILLIC_GHE_STROKE_HOOK              # ӻ
+"\u04FC": CYRILLIC_HA_HOOK                      # Ӽ
+"\u04FD": CYRILLIC_HA_HOOK                      # ӽ
+"\u04FE": CYRILLIC_HA_STROKE                    # Ӿ
+"\u04FF": CYRILLIC_HA_STROKE                    # ӿ
 
 # General Punctuation
-"\u2010": HYPHEN
-"\u2011": NON_BREAKING_HYPHEN
-"\u2012": FIGURE_DASH
-"\u2013": EN_DASH
-"\u2014": EM_DASH
-"\u2015": HORIZONTAL_BAR
-"\u2016": DOUBLE_VERTICAL_LINE
-"\u2017": DOUBLE_LOW_LINE
-"\u2018": LEFT_SINGLE_QUOTE
-"\u2019": RIGHT_SINGLE_QUOTE
-"\u201A": SINGLE_LOW_9_QUOTE
-"\u201B": SINGLE_HIGH_9_QUOTE
-"\u201C": LEFT_DOUBLE_QUOTE
-"\u201D": RIGHT_DOUBLE_QUOTE
-"\u201E": DOUBLE_LOW_9_QUOTE
-"\u201F": DOUBLE_HIGH_9_QUOTE
-"\u2020": DAGGER
-"\u2021": DOUBLE_DAGGER
-"\u2022": BULLET
-"\u2023": TRIANGULAR_BULLET
-"\u2024": ONE_DOT_LEADER
-"\u2025": TWO_DOT_LEADER
-"\u2026": ELLIPSIS
-"\u2027": HYPHENATION_POINT
-"\u2030": PER_MILLE
-"\u2031": PER_TEN_THOUSAND
-"\u2032": PRIME
-"\u2033": DOUBLE_PRIME
-"\u2034": TRIPLE_PRIME
-"\u2035": REVERSED_PRIME
-"\u2036": REVERSED_DOUBLE_PRIME
-"\u2037": REVERSED_TRIPLE_PRIME
-"\u2038": CARET
-"\u2039": LEFT_SINGLE_ANGLE_QUOTE
-"\u203A": RIGHT_SINGLE_ANGLE_QUOTE
-"\u203B": REFERENCE_MARK
-"\u203C": DOUBLE_EXCLAMATION
-"\u203D": INTERROBANG
-"\u203E": OVERLINE
-"\u203F": UNDERTIE
-"\u2040": CHARACTER_TIE
-"\u2041": CARET_INSERTION_POINT
-"\u2042": ASTERISM
-"\u2043": HYPHEN_BULLET
-"\u2044": FRACTION_SLASH
-"\u2045": LEFT_BRACKET_QUILL
-"\u2046": RIGHT_BRACKET_QUILL
-"\u2047": DOUBLE_QUESTION
-"\u2048": QUESTION_EXCLAMATION
-"\u2049": EXCLAMATION_QUESTION
-"\u204A": TIRONIAN_ET
-"\u204B": REVERSED_PILCROW
-"\u204C": LEFT_BULLET
-"\u204D": RIGHT_BULLET
-"\u204E": LOW_ASTERISK
-"\u204F": REVERSED_SEMICOLON
-"\u2050": CLOSE_UP
-"\u2051": VERTICAL_TWO_ASTERISKS
-"\u2052": COMMERCIAL_MINUS
-"\u2053": SWUNG_DASH
-"\u2054": INVERTED_UNDERTIE
-"\u2055": FLOWER
-"\u2056": THREE_DOT
-"\u2057": QUADRUPLE_PRIME
-"\u2058": FOUR_DOT
-"\u2059": FIVE_DOT
-"\u205A": TWO_DOT
-"\u205B": FOUR_DOT_MARK
-"\u205C": DOTTED_CROSS
-"\u205D": TRICOLON
-"\u205E": VERTICAL_FOUR_DOTS
+"\u2010": HYPHEN                                # ‐
+"\u2011": NON_BREAKING_HYPHEN                   # ‑
+"\u2012": FIGURE_DASH                           # ‒
+"\u2013": EN_DASH                               # –
+"\u2014": EM_DASH                               # —
+"\u2015": HORIZONTAL_BAR                        # ―
+"\u2016": DOUBLE_VERTICAL_LINE                  # ‖
+"\u2017": DOUBLE_LOW_LINE                       # ‗
+"\u2018": LEFT_SINGLE_QUOTE                     # ‘
+"\u2019": RIGHT_SINGLE_QUOTE                    # ’
+"\u201A": SINGLE_LOW_9_QUOTE                    # ‚
+"\u201B": SINGLE_HIGH_9_QUOTE                   # ‛
+"\u201C": LEFT_DOUBLE_QUOTE                     # “
+"\u201D": RIGHT_DOUBLE_QUOTE                    # ”
+"\u201E": DOUBLE_LOW_9_QUOTE                    # „
+"\u201F": DOUBLE_HIGH_9_QUOTE                   # ‟
+"\u2020": DAGGER                                # †
+"\u2021": DOUBLE_DAGGER                         # ‡
+"\u2022": BULLET                                # •
+"\u2023": TRIANGULAR_BULLET                     # ‣
+"\u2024": ONE_DOT_LEADER                        # ․
+"\u2025": TWO_DOT_LEADER                        # ‥
+"\u2026": ELLIPSIS                              # …
+"\u2027": HYPHENATION_POINT                     # ‧
+"\u2030": PER_MILLE                             # ‰
+"\u2031": PER_TEN_THOUSAND                      # ‱
+"\u2032": PRIME                                 # ′
+"\u2033": DOUBLE_PRIME                          # ″
+"\u2034": TRIPLE_PRIME                          # ‴
+"\u2035": REVERSED_PRIME                        # ‵
+"\u2036": REVERSED_DOUBLE_PRIME                 # ‶
+"\u2037": REVERSED_TRIPLE_PRIME                 # ‷
+"\u2038": CARET                                 # ‸
+"\u2039": LEFT_SINGLE_ANGLE_QUOTE               # ‹
+"\u203A": RIGHT_SINGLE_ANGLE_QUOTE              # ›
+"\u203B": REFERENCE_MARK                        # ※
+"\u203C": DOUBLE_EXCLAMATION                    # ‼
+"\u203D": INTERROBANG                           # ‽
+"\u203E": OVERLINE                              # ‾
+"\u203F": UNDERTIE                              # ‿
+"\u2040": CHARACTER_TIE                         # ⁀
+"\u2041": CARET_INSERTION_POINT                 # ⁁
+"\u2042": ASTERISM                              # ⁂
+"\u2043": HYPHEN_BULLET                         # ⁃
+"\u2044": FRACTION_SLASH                        # ⁄
+"\u2045": LEFT_BRACKET_QUILL                    # ⁅
+"\u2046": RIGHT_BRACKET_QUILL                   # ⁆
+"\u2047": DOUBLE_QUESTION                       # ⁇
+"\u2048": QUESTION_EXCLAMATION                  # ⁈
+"\u2049": EXCLAMATION_QUESTION                  # ⁉
+"\u204A": TIRONIAN_ET                           # ⁊
+"\u204B": REVERSED_PILCROW                      # ⁋
+"\u204C": LEFT_BULLET                           # ⁌
+"\u204D": RIGHT_BULLET                          # ⁍
+"\u204E": LOW_ASTERISK                          # ⁎
+"\u204F": REVERSED_SEMICOLON                    # ⁏
+"\u2050": CLOSE_UP                              # ⁐
+"\u2051": VERTICAL_TWO_ASTERISKS                # ⁑
+"\u2052": COMMERCIAL_MINUS                      # ⁒
+"\u2053": SWUNG_DASH                            # ⁓
+"\u2054": INVERTED_UNDERTIE                     # ⁔
+"\u2055": FLOWER                                # ⁕
+"\u2056": THREE_DOT                             # ⁖
+"\u2057": QUADRUPLE_PRIME                       # ⁗
+"\u2058": FOUR_DOT                              # ⁘
+"\u2059": FIVE_DOT                              # ⁙
+"\u205A": TWO_DOT                               # ⁚
+"\u205B": FOUR_DOT_MARK                         # ⁛
+"\u205C": DOTTED_CROSS                          # ⁜
+"\u205D": TRICOLON                              # ⁝
+"\u205E": VERTICAL_FOUR_DOTS                    # ⁞
 
 # Currency Symbols
-"\u20A0": EURO_CURRENCY
-"\u20A1": COLON_SIGN
-"\u20A2": CRUZEIRO
-"\u20A3": FRENCH_FRANC
-"\u20A4": LIRA
-"\u20A5": MILL
-"\u20A6": NAIRA
-"\u20A7": PESETA
-"\u20A8": RUPEE
-"\u20A9": WON
-"\u20AA": NEW_SHEQEL
-"\u20AB": DONG
-"\u20AC": EURO
-"\u20AD": KIP
-"\u20AE": TUGRIK
-"\u20AF": DRACHMA
-"\u20B0": [GERMAN_PENNY, PFENNIG]
-"\u20B1": PESO
-"\u20B2": GUARANI
-"\u20B3": AUSTRAL
-"\u20B4": HRYVNIA
-"\u20B5": CEDI
-"\u20B6": LIVRE_TOURNOIS
-"\u20B7": SPESMILO
-"\u20B8": TENGE
-"\u20B9": INDIAN_RUPEE
-"\u20BA": TURKISH_LIRA
-"\u20BB": NORDIC_MARK
-"\u20BC": MANAT
-"\u20BD": RUBLE
-"\u20BE": LARI
-"\u20BF": BITCOIN
-"\u20C0": SOM
+"\u20A0": EURO_CURRENCY                         # ₠
+"\u20A1": COLON_SIGN                            # ₡
+"\u20A2": CRUZEIRO                              # ₢
+"\u20A3": FRENCH_FRANC                          # ₣
+"\u20A4": LIRA                                  # ₤
+"\u20A5": MILL                                  # ₥
+"\u20A6": NAIRA                                 # ₦
+"\u20A7": PESETA                                # ₧
+"\u20A8": RUPEE                                 # ₨
+"\u20A9": WON                                   # ₩
+"\u20AA": NEW_SHEQEL                            # ₪
+"\u20AB": DONG                                  # ₫
+"\u20AC": EURO                                  # €
+"\u20AD": KIP                                   # ₭
+"\u20AE": TUGRIK                                # ₮
+"\u20AF": DRACHMA                               # ₯
+"\u20B0": [GERMAN_PENNY, PFENNIG]               # ₰
+"\u20B1": PESO                                  # ₱
+"\u20B2": GUARANI                               # ₲
+"\u20B3": AUSTRAL                               # ₳
+"\u20B4": HRYVNIA                               # ₴
+"\u20B5": CEDI                                  # ₵
+"\u20B6": LIVRE_TOURNOIS                        # ₶
+"\u20B7": SPESMILO                              # ₷
+"\u20B8": TENGE                                 # ₸
+"\u20B9": INDIAN_RUPEE                          # ₹
+"\u20BA": TURKISH_LIRA                          # ₺
+"\u20BB": NORDIC_MARK                           # ₻
+"\u20BC": MANAT                                 # ₼
+"\u20BD": RUBLE                                 # ₽
+"\u20BE": LARI                                  # ₾
+"\u20BF": BITCOIN                               # ₿
+"\u20C0": SOM                                   # ⃀
