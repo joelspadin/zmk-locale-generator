@@ -255,7 +255,7 @@ z: Z
 "\u012E": [I_OGONEK, I_OGON]                    # Į
 "\u012F": [I_OGONEK, I_OGON]                    # į
 "\u0130": I_DOT                                 # İ
-"\u0131": I_DOT                                 # ı
+"\u0131": I_DOTLESS                             # ı
 "\u0132": IJ                                    # Ĳ
 "\u0133": IJ                                    # ĳ
 "\u0134": [J_CIRCUMFLEX, J_CIRC]                # Ĵ
