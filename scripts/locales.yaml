@@ -1,0 +1,78 @@
+%YAML 1.2
+# List of locales for batch operations.
+# Each item has the following fields:
+#
+#   locale: The prefix for key names
+#   layout: Read from kbdlayout.info/{layout} (optional, defaults to locale)
+#   filename: Generate keys_{filename}.h (optional, defaults to locale)
+---
+- locale: ar
+  layout: kbda1
+- locale: bd
+  layout: kbdinben
+- locale: be
+- locale: ca
+- locale: cs
+- locale: da
+- locale: de
+- locale: dv
+  filename: dvorak
+- locale: dv
+  layout: kbdusl
+  filename: dvorak_left
+- locale: dv
+  layout: kbdusr
+  filename: dvorak_right
+- locale: fr
+- locale: el
+- locale: es
+  layout: kbdes
+  filename: es_variation
+- locale: es
+  layout: kbdsp
+- locale: he
+  layout: kbdheb
+- locale: he
+  layout: kbdhebl3
+  filename: he_standard
+- locale: hu
+- locale: in
+  layout: kbdinen
+- locale: ir
+- locale: it
+- locale: jp
+  layout: kbdjpn
+- locale: kr
+  layout: kbdkor
+- locale: la
+- locale: no
+- locale: pl
+- locale: pl
+  layout: kbdpl1
+  filename: pl_programmers
+- locale: ro
+  layout: kbdrost
+- locale: ro
+  layout: kbdropr
+  filename: ro_programmers
+- locale: ru
+- locale: sk
+- locale: sv
+- locale: ta
+  layout: kbdintam
+- locale: ta
+  layout: kbdtam99
+  filename: ta_99
+- locale: th
+- locale: th
+  layout: kbdth1
+  filename: th_pattachote
+- locale: tr
+- locale: tr
+  layout: kbdtuf
+  filename: tr_f
+- locale: uk
+- locale: ukr
+  layout: kbdur
+- locale: usx
+  filename: us_international

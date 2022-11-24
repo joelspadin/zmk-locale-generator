@@ -2,6 +2,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 import re
+import unicodedata
 
 from .keys import Modifier
 
@@ -59,9 +60,27 @@ def _parse_layout(locale: str, tree: ET.ElementTree):
     return layout
 
 
+_INVALID_CATEGORIES = [
+    "Cn",  # unassigned
+    "Co",  # private use
+    "Cs",  # lower surrogate
+]
+
+
+def _is_valid_character(c: str):
+    # TODO: Layouts sometimes contain keys with a string of multiple characters.
+    # Don't know what to do with those yet, so just ignore them.
+    if len(c) > 1:
+        return False
+
+    return unicodedata.category(c) not in _INVALID_CATEGORIES
+
+
 def _parse_keymap(keymap: ET.Element):
     keys = {
-        key.attrib["iso"]: _unescape(key.attrib["to"]) for key in keymap.findall("map")
+        key.attrib["iso"]: v
+        for key in keymap.findall("map")
+        if _is_valid_character(v := _unescape(key.attrib["to"]))
     }
 
     try:
@@ -84,4 +103,5 @@ _MODIFIERS = {
     "altR": Modifier.RAlt,
     "ctrl": Modifier.LCtrl,
     "shift": Modifier.LShift,
+    # TODO: figure out how to handle VK_KANA
 }
