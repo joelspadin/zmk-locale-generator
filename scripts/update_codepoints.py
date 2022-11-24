@@ -15,7 +15,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from batch_locales import get_locales
 from zmk_locale_generator.locales import get_layout
-from zmk_locale_generator.codepoints import get_codepoint_names_raw
+from zmk_locale_generator.codepoints import (
+    get_codepoint_names_raw,
+    is_visible_character,
+)
 
 yaml = YAML()
 
@@ -147,17 +150,6 @@ def add_new_codepoint_placeholders(
         if not c in block:
             pos = upper_bound(block.keys(), c)
             block.insert(pos, c, "")
-
-
-# Characters for which str.isprintable() returns true, but which don't have a glyph.
-# Determine by experimentation.
-INVISIBLE_CHARACTERS = [
-    "\u034f",  # Combining Grapheme Joiner
-]
-
-
-def is_visible_character(c: str):
-    return c.isprintable() and not c.isspace() and not c in INVISIBLE_CHARACTERS
 
 
 def add_codepoint_comments(codepoints: CommentedSeq, blocks: list[UnicodeBlock]):

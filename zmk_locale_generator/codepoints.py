@@ -25,3 +25,14 @@ def get_codepoint_names_raw() -> CommentedSeq[CommentedMap[str, str | list[str]]
     with CODEPOINTS_PATH.open("r", encoding="utf-8") as f:
         yaml = YAML()
         return yaml.load(f)
+
+
+# Characters for which str.isprintable() returns true, but which don't have a glyph.
+# Determine by experimentation.
+INVISIBLE_CHARACTERS = [
+    "\u034f",  # Combining Grapheme Joiner
+]
+
+
+def is_visible_character(c: str):
+    return c.isprintable() and not c.isspace() and not c in INVISIBLE_CHARACTERS

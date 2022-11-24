@@ -6,7 +6,7 @@ from typing import TextIO
 
 
 from . import locales
-from .codepoints import get_codepoint_names
+from .codepoints import get_codepoint_names, is_visible_character
 from .keys import HidUsage, KeyAlias, Modifier, parse_keys, get_zmk_name
 from .util import unique
 
@@ -63,6 +63,9 @@ class LocaleGenerator:
                 aliases = names[1:]
 
                 io.write("\n")
+                if is_visible_character(value):
+                    io.write(f"/* {value} */\n")
+
                 io.write(f"#define {main} ({usage})\n")
                 for alias in aliases:
                     io.write(f"#define {alias} ({main})\n")
