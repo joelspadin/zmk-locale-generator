@@ -131,26 +131,24 @@ def _remove_shift(modifiers: frozenset[Modifier]):
 
 
 def _dedupe_uppercase(defs: list[tuple[HidUsage, str]]):
-    base_defs = [d for d in defs if not d[0].modifiers]
-    mod_defs = [d for d in defs if d[0].modifiers]
+    base_defs = [d for d in defs if not _has_shift(d[0].modifiers)]
+    shift_defs = [d for d in defs if _has_shift(d[0].modifiers)]
 
     # If we have two definitions a and b such that:
-    # a.value == b.value.upper() and a.usage == LS(b.usage)
+    # a.value.casefold() == b.value.casefold() and a.usage == LS(b.usage)
     # then the uppercase definition (a) is redundant.
 
     def is_duplicate_uppercase(a: tuple[HidUsage, str]):
-        if not _has_shift(a[0].modifiers):
-            return False
-
-        base_mods = _remove_shift(a[0].modifiers)
+        a_casefold = a[1].casefold()
+        a_mods = _remove_shift(a[0].modifiers)
         return any(
-            a[1].casefold() == b[1].casefold() and base_mods == b[0].modifiers
+            a_casefold == b[1].casefold() and a_mods == b[0].modifiers
             for b in base_defs
         )
 
-    mod_defs = [d for d in mod_defs if not is_duplicate_uppercase(d)]
+    shift_defs = [d for d in shift_defs if not is_duplicate_uppercase(d)]
 
-    return base_defs + mod_defs
+    return base_defs + shift_defs
 
 
 def _dedupe_same_usage(defs: list[tuple[HidUsage, str]]):
