@@ -2,7 +2,6 @@
 
 import argparse
 from dataclasses import dataclass
-from multiprocessing import Pool
 from pathlib import Path
 import re
 from ruamel.yaml import YAML
@@ -11,10 +10,12 @@ import sys
 import unicodedata
 import urllib.request
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+REPO_PATH = Path(__file__).parent.parent
 
-from batch_locales import get_locales
-from zmk_locale_generator.locales import get_layout
+sys.path.insert(0, str(REPO_PATH))
+
+from keyboards import get_keyboards
+from zmk_locale_generator.cldr import parse_cldr_keyboard
 from zmk_locale_generator.codepoints import (
     get_codepoint_names_raw,
     is_visible_character,
@@ -29,13 +30,15 @@ YAML_HEADER = """\
 %YAML 1.2
 # This document maps Unicode codepoints to key names for ZMK.
 # Do not manually add new codepoitns to this file. Instead, add locales to
-# /scripts/locales.yaml and run /scripts/update_codepoints.py. Then you can
+# scripts/locales.yaml and run scripts/update_codepoints.py. Then you can
 # edit this file to assign names to the codepoints it adds.
 #
-# Each value is either a single string or a list of strings. The locale
-# abbreviation will prefix each name, e.g. A -> DE_A for a German layout.
+# Each value is either a single string or a list of strings which must be valid
+# C symbols. Each name will be prefixed with the locale abbreviation, e.g. for
+# a German layout, A -> DE_A.
+#
 # If a name matches a name from ZMK's keys.h, any aliases for that key will
-# automatically be added.
+# automatically be added, e.g. for a German layout, ESCAPE -> DE_ESCAPE, DE_ESC.
 ---
 """
 
@@ -112,18 +115,20 @@ def filter_codepoint(c):
     return ord(c) >= 0x20 or c in CONTROL_CODES
 
 
+def get_keyboard(path: Path):
+    with path.open("r", encoding="utf-8") as f:
+        return parse_cldr_keyboard(f)
+
+
 def get_used_codepoints():
     """
     Get the list of codepoints that are used by the selected keyboard layouts.
     """
-    locales = list(get_locales())
-
-    with Pool(processes=len(locales)) as pool:
-        layouts = pool.map(get_layout, (x.layout for x in locales))
+    keyboards = [get_keyboard(keyboard.path) for keyboard in get_keyboards()]
 
     codepoints: set[str] = set()
-    for layout in layouts:
-        for keymap in layout.keymaps:
+    for keyboard in keyboards:
+        for keymap in keyboard.keymaps:
             codepoints.update(v for v in keymap.keys.values() if filter_codepoint(v))
 
     return sorted(codepoints)
@@ -156,31 +161,31 @@ def add_codepoint_comments(codepoints: CommentedSeq, blocks: list[UnicodeBlock])
     """
     Add a comment to show the character for every printable character.
     """
-    for item in codepoints:
+
+    def get_char_comments(item: CommentedMap, c: str):
+        yield c if is_visible_character(c) else "(non-printable)"
+
+        if not item[c]:
+            try:
+                yield re.sub(r"[^\w]+", "_", unicodedata.name(c).upper())
+            except ValueError:
+                pass
+
+    for i, item in enumerate(codepoints):
+        item: CommentedMap
         block = codepoint_to_block(first_key(item), blocks)
 
         # ruamel.yaml parses the first block's comment as being a start comment
         # for the whole sequence, so don't set it on the list item too or it
         # will duplicate the comment.
         if block.start == "\0":
-            codepoints.yaml_set_start_comment("# " + block.name)
+            codepoints.yaml_set_start_comment(block.name)
         else:
-            item.yaml_set_start_comment("\n# " + block.name)
+            codepoints.yaml_set_comment_before_after_key(i, before="\n" + block.name)
 
         for c in item.keys():
-            comments = []
-            if not item[c]:
-                try:
-                    name = re.sub(r"[^\w]+", "_", unicodedata.name(c).upper())
-                    comments.append(f"# {name}")
-                except ValueError:
-                    pass
-
-            if is_visible_character(c):
-                comments.append(f"# {c}")
-
-            if comments:
-                item.yaml_add_eol_comment(" ".join(comments), key=c)
+            if comment := " ".join(get_char_comments(item, c)):
+                item.yaml_add_eol_comment("# " + comment, key=c)
 
 
 # Matches "foo:", "'foo':", or '"foo":' if preceded by "  " or "- ".
@@ -220,11 +225,8 @@ def main():
 
     blocks = list(get_unicode_blocks())
     codepoints = get_codepoint_names_raw()
-
-    print("Fetching locales...")
     used = get_used_codepoints()
 
-    print(f"Writing {args.out}")
     remove_unused_codepoints(codepoints, used)
     add_new_codepoint_placeholders(codepoints, blocks, used)
     add_codepoint_comments(codepoints, blocks)

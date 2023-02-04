@@ -6,14 +6,15 @@ Runs zmk_locale_generator for all locales in locales.yaml.
 
 import argparse
 import logging
-from multiprocessing import Pool
 from pathlib import Path
 import sys
-import subprocess
+from keyboards import get_keyboards, Keyboard
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+REPO_PATH = Path(__file__).parent.parent
 
-from batch_locales import get_locales, Locale
+sys.path.insert(0, str(REPO_PATH))
+
+from zmk_locale_generator import LayoutHeaderGenerator
 
 
 def main():
@@ -29,36 +30,33 @@ def main():
     parser.add_argument("-z", "--zmk", type=Path, help="path to ZMK repo")
 
     args = parser.parse_args()
-
-    extra_args = []
-    if args.verbose:
-        extra_args.append("-v")
-    if args.zmk:
-        extra_args += ["--zmk", args.zmk]
-
     args.out.mkdir(parents=True, exist_ok=True)
 
-    with Pool() as pool:
-        output = pool.starmap(generate, ((entry, args) for entry in get_locales()))
-
-    for locale, text in output:
-        if text:
-            print(f"===== {locale.upper()} =====")
-            print(text)
-
-
-def generate(entry: Locale, args):
-    command = [sys.executable, "-m", "zmk_locale_generator", entry.locale]
-    command += ["--layout", entry.layout]
-    command += ["--out", args.out / entry.filename]
     if args.verbose:
-        command.append("-v")
-    if args.zmk:
-        command += ["--zmk", args.zmk]
+        logging.getLogger().setLevel(logging.DEBUG)
 
-    return entry.locale, subprocess.check_output(
-        command, stderr=subprocess.STDOUT, encoding="utf-8"
-    )
+    generator = LayoutHeaderGenerator(args.zmk)
+
+    for keyboard in get_keyboards():
+        out_path = args.out / keyboard.filename
+
+        print(f"{shorten_path(keyboard.path)} -> {out_path}")
+
+        with keyboard.path.open("r", encoding="utf-8") as infile:
+            with out_path.open("w", encoding="utf-8") as outfile:
+                generator.write_header(
+                    infile,
+                    outfile,
+                    prefix=keyboard.prefix,
+                    license_path=keyboard.license,
+                )
+
+
+def shorten_path(path: Path):
+    try:
+        return path.relative_to(Path.cwd())
+    except ValueError:
+        return path
 
 
 if __name__ == "__main__":

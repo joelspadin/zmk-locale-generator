@@ -1,3 +1,6 @@
 [submodule "zmk"]
 	path = zmk
 	url = https://github.com/zmkfirmware/zmk.git
+[submodule "zmk_locale_generator/cldr"]
+	path = cldr
+	url = https://github.com/unicode-org/cldr.git

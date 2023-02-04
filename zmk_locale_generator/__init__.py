@@ -1,1 +1,1 @@
-from .generator import LocaleGenerator as LocaleGenerator
+from .generator import LayoutHeaderGenerator as LayoutHeaderGenerator

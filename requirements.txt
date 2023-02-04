@@ -1,1 +1,1 @@
-ruamel.yaml
+ruamel.yaml ~= 0.17.21

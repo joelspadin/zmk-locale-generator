@@ -1,0 +1,482 @@
+%YAML 1.2
+# List of locales for batch operations.
+# Each item has the following fields:
+#
+#   path: Path to the CLDR keyboard layout
+#   prefix: Prefix for key names (optional, defaults to first part of file name)
+#   license: Path to the license file (automatically set for files from CLDR)
+#   filename: Generate keys_{filename}.h (optional, defaults to locale)
+---
+# Arabic
+- path: ../cldr/keyboards/windows/ar-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/ar-t-k0-windows-azerty.xml
+  filename: ar_azerty
+- path: ../cldr/keyboards/windows/ar-t-k0-windows-102key.xml
+  filename: ar_102
+
+# Assamese
+- path: ../cldr/keyboards/windows/as-t-k0-windows.xml
+
+# Azeri
+- path: ../cldr/keyboards/windows/az-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/az-t-k0-windows-extended.xml
+  filename: az_standard
+- path: ../cldr/keyboards/windows/az-Cyrl-t-k0-windows.xml
+  filename: az_cyrillic
+
+# Bashkir
+- path: ../cldr/keyboards/windows/ba-t-k0-windows.xml
+
+# Belarusian
+- path: ../cldr/keyboards/windows/be-t-k0-windows.xml
+
+# Bulgarian
+- path: ../cldr/keyboards/windows/bg-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/bg-t-k0-windows-qwerty.xml
+  filename: bg_phonetic
+- path: ../cldr/keyboards/windows/bg-Latn-t-k0-windows.xml
+  filename: bg_latin
+
+# N'Ko
+- path: ../cldr/keyboards/windows/bm-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/dyu-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/man-t-k0-windows.xml
+
+# Bengali
+- path: ../cldr/keyboards/windows/bn-t-k0-windows-qwerty.xml
+- path: ../cldr/keyboards/windows/bn-t-k0-windows.xml
+  filename: bn_inscript
+
+# Tibetan
+- path: ../cldr/keyboards/windows/bo-t-k0-windows-extended.xml
+
+# Bosnian
+- path: ../cldr/keyboards/windows/bs-Cyrl-t-k0-windows.xml
+
+# Buginese
+- path: ../cldr/keyboards/windows/bug-t-k0-windows.xml
+
+# Cherokee
+- path: ../cldr/keyboards/windows/chr-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/chr-t-k0-windows-phonetic.xml
+  filename: chr_phonetic
+
+# Central Kurdish
+- path: ../cldr/keyboards/windows/ckb-t-k0-windows.xml
+
+# Czech
+- path: ../cldr/keyboards/windows/cs-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/cs-t-k0-windows-extended.xml
+  filename: cs_programmers
+- path: ../cldr/keyboards/windows/cs-t-k0-windows-qwerty.xml
+  filename: cs_qwerty
+
+# Danish
+- path: ../cldr/keyboards/windows/da-t-k0-windows.xml
+
+# German
+- path: ../cldr/keyboards/windows/de-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/de-t-k0-windows-extended.xml
+  filename: de_ibm
+- path: ../cldr/keyboards/windows/de-BE-t-k0-windows.xml
+  filename: de_belgian
+- path: ../cldr/keyboards/windows/de-BE-t-k0-windows-var.xml
+  filename: de_belgian_period
+- path: ../cldr/keyboards/windows/de-CH-t-k0-windows.xml
+  filename: de_swiss
+
+# Sorbian
+- path: ../cldr/keyboards/windows/dsb-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/dsb-t-k0-windows-extended.xml
+  filename: dsb_extended
+
+# Divehi
+- path: ../cldr/keyboards/windows/dv-t-k0-windows.xml
+
+# Dzongkha
+- path: ../cldr/keyboards/windows/dz-t-k0-windows.xml
+
+# Greek
+- path: ../cldr/keyboards/windows/el-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/el-t-k0-windows-el220.xml
+  filename: el_220
+- path: ../cldr/keyboards/windows/el-t-k0-windows-el319.xml
+  filename: el_319
+- path: ../cldr/keyboards/windows/el-Latn-t-k0-windows.xml
+  filename: el_latin
+- path: ../cldr/keyboards/windows/el-Latn-t-k0-windows-el220.xml
+  filename: el_latin_220
+- path: ../cldr/keyboards/windows/el-Latn-t-k0-windows-el319.xml
+  filename: el_latin_319
+- path: ../cldr/keyboards/windows/el-POLYTON-t-k0-windows.xml
+  filename: el_polytonic
+
+# English
+- prefix: gb
+  path: ../cldr/keyboards/windows/en-GB-t-k0-windows.xml
+  filename: en_gb
+- prefix: gb
+  path: ../cldr/keyboards/windows/en-GB-t-k0-windows-extended.xml
+  filename: en_gb_extended
+- prefix: in
+  path: ../cldr/keyboards/windows/en-IN-t-k0-windows.xml
+  filename: en_india
+- locale: usx
+  path: ../cldr/keyboards/windows/en-t-k0-windows-extended.xml
+  filename: us_international
+
+# English (Dvorak)
+- prefix: dv
+  path: ../cldr/keyboards/windows/en-t-k0-windows-dvorak.xml
+  filename: dvorak
+- prefix: dv
+  path: ../cldr/keyboards/windows/en-t-k0-windows-dvorakl.xml
+  filename: dvorak_left
+- prefix: dv
+  path: ../cldr/keyboards/windows/en-t-k0-windows-dvorakr.xml
+  filename: dvorak_right
+
+# Spanish
+- path: ../cldr/keyboards/windows/es-t-k0-windows.xml
+- locale: es
+  path: ../cldr/keyboards/windows/es-t-k0-windows-extended.xml
+  filename: es_variation
+- path: ../cldr/keyboards/windows/es-419-t-k0-windows.xml
+  filename: es_latin_american
+
+# Estonian
+- path: ../cldr/keyboards/windows/et-t-k0-windows.xml
+
+# Persian
+- path: ../cldr/keyboards/windows/fa-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/fa-t-k0-windows-extended.xml
+  filename: fa_standard
+
+# Finnish
+- path: ../cldr/keyboards/windows/fi-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/fi-t-k0-windows-extended.xml
+  filename: fi_sami
+
+# Faeroese
+- path: ../cldr/keyboards/windows/fo-t-k0-windows.xml
+
+# French
+- path: ../cldr/keyboards/windows/fr-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/fr-BE-t-k0-windows.xml
+  filename: fr_belgian
+- path: ../cldr/keyboards/windows/fr-BE-t-k0-windows-var.xml
+  filename: fr_belgian_period
+- path: ../cldr/keyboards/windows/fr-CA-t-k0-windows.xml
+  filename: fr_canadian_standard
+- path: ../cldr/keyboards/windows/fr-CA-t-k0-windows-var.xml
+  filename: fr_canadian_french
+- path: ../cldr/keyboards/windows/fr-CH-t-k0-windows.xml
+  filename: fr_swiss
+
+# Irish
+- path: ../cldr/keyboards/windows/ga-t-k0-windows.xml
+
+# Scottish Gaelic
+- path: ../cldr/keyboards/windows/gd-t-k0-windows.xml
+
+# Guarani
+- path: ../cldr/keyboards/windows/gn-t-k0-windows.xml
+
+# Gothic
+- path: ../cldr/keyboards/windows/got-t-k0-windows.xml
+
+# Gujarati
+- path: ../cldr/keyboards/windows/gu-t-k0-windows.xml
+
+# Hausa
+- path: ../cldr/keyboards/windows/ha-t-k0-windows.xml
+
+# Hawaiian
+- path: ../cldr/keyboards/windows/haw-t-k0-windows.xml
+
+# Hebrew
+- path: ../cldr/keyboards/windows/he-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/he-t-k0-windows-extended.xml
+  filename: he_standard
+
+# Hindi/Devanagari
+- path: ../cldr/keyboards/windows/hi-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/hi-t-k0-windows-legacy.xml
+  filename: hi_traditional
+
+# Hungarian
+- path: ../cldr/keyboards/windows/hu-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/hu-t-k0-windows-101key.xml
+  filename: hu_101
+
+# Armenian
+- path: ../cldr/keyboards/windows/hy-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/hy-t-k0-windows-phonetic.xml
+  filename: hy_phonetic
+
+# Igbo
+- path: ../cldr/keyboards/windows/ig-t-k0-windows.xml
+
+# Icelandic
+- path: ../cldr/keyboards/windows/is-t-k0-windows.xml
+
+# Italian
+- path: ../cldr/keyboards/windows/it-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/it-t-k0-windows-var.xml
+  filename: it_142
+
+# Inuktitut
+- path: ../cldr/keyboards/windows/iu-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/iu-t-k0-windows-var.xml
+  filename: iu_latin
+
+# Japanese
+# (Identical to English)
+
+# Javanese
+- path: ../cldr/keyboards/windows/jv-t-k0-windows.xml
+
+# Georgian
+- path: ../cldr/keyboards/windows/ka-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/ka-t-k0-windows-var.xml
+  filename: ka_ergonomic
+- path: ../cldr/keyboards/windows/ka-t-k0-windows-qwerty.xml
+  filename: ka_qwerty
+
+# Tai Lue
+- path: ../cldr/keyboards/windows/khb-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/khb-Tale-t-k0-windows.xml
+  filename: khb_tai_le
+
+# Kazakh
+- path: ../cldr/keyboards/windows/kk-t-k0-windows.xml
+
+# Greenlandic
+- path: ../cldr/keyboards/windows/kl-t-k0-windows.xml
+
+# Khmer
+- path: ../cldr/keyboards/windows/km-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/km-t-k0-windows-extended.xml
+  filename: km_nida
+
+# Kannada
+- path: ../cldr/keyboards/windows/kn-t-k0-windows.xml
+
+# Korean
+- path: ../cldr/keyboards/windows/ko-t-k0-windows.xml
+
+# Kyrgyz Cyrillic
+- path: ../cldr/keyboards/windows/ky-t-k0-windows.xml
+
+# Latin
+- path: ../cldr/keyboards/windows/la-Ital-t-k0-windows.xml
+  filename: la_old_italic
+
+# Luxembourgish
+- path: ../cldr/keyboards/windows/lb-t-k0-windows.xml
+
+# Lisu
+- path: ../cldr/keyboards/windows/lis-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/lis-t-k0-windows-extended.xml
+  filename: lis_standard
+
+# Lao
+- path: ../cldr/keyboards/windows/lo-t-k0-windows.xml
+
+# Lithuanian
+- path: ../cldr/keyboards/windows/lt-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/lt-t-k0-windows-lt1205.xml
+  filename: lt_ibm
+- path: ../cldr/keyboards/windows/lt-t-k0-windows-lt1582.xml
+  filename: lt_standard
+
+# Latvian
+- path: ../cldr/keyboards/windows/lv-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/lv-t-k0-windows-qwerty.xml
+  filename: lv_qwerty
+- path: ../cldr/keyboards/windows/lv-t-k0-windows-extended.xml
+  filename: lv_standard
+
+# Maori
+- path: ../cldr/keyboards/windows/mi-t-k0-windows.xml
+
+# Macedonian
+- path: ../cldr/keyboards/windows/mk-t-k0-windows.xml
+
+# Malayalam
+- path: ../cldr/keyboards/windows/ml-t-k0-windows.xml
+
+# Mongolian
+- path: ../cldr/keyboards/windows/mn-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/mn-Mong-t-k0-windows.xml
+  filename: mn_traditional
+- path: ../cldr/keyboards/windows/mn-Phag-t-k0-windows.xml
+  filename: mn_phags_pa
+
+# Marathi
+- path: ../cldr/keyboards/windows/mr-t-k0-windows.xml
+
+# Maltese
+- path: ../cldr/keyboards/windows/mt-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/mt-t-k0-windows-101key.xml
+  filename: mt_101
+
+# Myanmar
+- path: ../cldr/keyboards/windows/my-t-k0-windows.xml
+
+# Norwegian
+- path: ../cldr/keyboards/windows/nb-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/nb-t-k0-windows-extended.xml
+  filename: nb_sami
+
+# Nepali
+- path: ../cldr/keyboards/windows/ne-t-k0-windows.xml
+
+# Belgian
+- path: ../cldr/keyboards/windows/nl-BE-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/nl-BE-t-k0-windows-var.xml
+  filename: nl_period
+
+# Futhark
+- path: ../cldr/keyboards/windows/non-t-k0-windows.xml
+
+# Sesotho sa Leboa
+- path: ../cldr/keyboards/windows/nso-t-k0-windows.xml
+
+# Odia
+- path: ../cldr/keyboards/windows/or-t-k0-windows.xml
+
+# Punjabi
+- path: ../cldr/keyboards/windows/pa-t-k0-windows.xml
+
+# Polish
+- path: ../cldr/keyboards/windows/pl-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/pl-t-k0-windows-extended.xml
+  filename: pl_programmers
+
+# Pashto
+- path: ../cldr/keyboards/windows/ps-t-k0-windows.xml
+
+# Portuguese
+- path: ../cldr/keyboards/windows/pt-PT-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/pt-t-k0-windows.xml
+  filename: pt_abnt
+- path: ../cldr/keyboards/windows/pt-t-k0-windows-var.xml
+  filename: pt_abnt2
+
+# Romanian
+- path: ../cldr/keyboards/windows/ro-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/ro-t-k0-windows-extended.xml
+  filename: ro_programmers
+
+# Russian
+- path: ../cldr/keyboards/windows/ru-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/ru-t-k0-windows-phonetic.xml
+  filename: ru_phonetic
+
+# Sakha
+- path: ../cldr/keyboards/windows/sah-t-k0-windows.xml
+
+# Ol Chiki
+- path: ../cldr/keyboards/windows/sat-t-k0-windows.xml
+
+# Sami
+- path: ../cldr/keyboards/windows/se-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/se-FI-t-k0-windows.xml
+  filename: se_finland_sweden
+
+# Sinhala
+- path: ../cldr/keyboards/windows/si-t-k0-windows.xml
+
+# Slovak
+- path: ../cldr/keyboards/windows/sk-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/sk-t-k0-windows-qwerty.xml
+  filename: sk_qwerty
+
+# Slovenian
+- path: ../cldr/keyboards/windows/sl-t-k0-windows.xml
+
+# Osmanya
+- path: ../cldr/keyboards/windows/so-Osma-t-k0-windows.xml
+
+# Albanian
+- path: ../cldr/keyboards/windows/sq-t-k0-windows.xml
+
+# Serbian
+- path: ../cldr/keyboards/windows/sr-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/sr-Latn-t-k0-windows.xml
+  filename: sr_latin
+
+# Sora
+- path: ../cldr/keyboards/windows/srb-t-k0-windows.xml
+
+# Swedish
+- path: ../cldr/keyboards/windows/sv-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/sv-t-k0-windows-extended.xml
+  filename: sv_sami
+
+# Syriac
+- path: ../cldr/keyboards/windows/syr-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/syr-t-k0-windows-qwerty.xml
+  filename: syr_phonetic
+
+# Tamil
+- path: ../cldr/keyboards/windows/ta-t-k0-windows.xml
+
+# Telugu
+- path: ../cldr/keyboards/windows/te-t-k0-windows.xml
+
+# Tajik
+- path: ../cldr/keyboards/windows/tg-t-k0-windows.xml
+
+# Thai
+- path: ../cldr/keyboards/windows/th-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/th-t-k0-windows-patta.xml
+  filename: th_pattachote
+
+# Turkmen
+- path: ../cldr/keyboards/windows/tk-t-k0-windows.xml
+
+# Tifinagh
+- path: ../cldr/keyboards/windows/tmh-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/tmh-t-k0-windows-extended.xml
+  filename: tmh_extended
+
+# Setswana
+- path: ../cldr/keyboards/windows/tn-t-k0-windows.xml
+
+# Turkish
+- path: ../cldr/keyboards/windows/tr-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/tr-t-k0-windows-legacy.xml
+  filename: tr_f
+
+# Tatar
+- path: ../cldr/keyboards/windows/tt-t-k0-windows.xml
+
+# Central Atlas Tamazight
+- path: ../cldr/keyboards/windows/tzm-t-k0-windows.xml
+
+# Uyghur
+- path: ../cldr/keyboards/windows/ug-t-k0-windows.xml
+
+# Ukrainian
+- path: ../cldr/keyboards/windows/uk-t-k0-windows.xml
+- path: ../cldr/keyboards/windows/uk-t-k0-windows-extended.xml
+  filename: uk_enhanced
+
+# Urdu
+- path: ../cldr/keyboards/windows/ur-t-k0-windows.xml
+
+# Uzbek Cyrillic
+- path: ../cldr/keyboards/windows/uz-t-k0-windows.xml
+
+# Vietnamese
+- path: ../cldr/keyboards/windows/vi-t-k0-windows.xml
+
+# Wolof
+- path: ../cldr/keyboards/windows/wo-t-k0-windows.xml
+
+# Yoruba
+- path: ../cldr/keyboards/windows/yo-t-k0-windows.xml
+# Chinese
+# (Identical to English)

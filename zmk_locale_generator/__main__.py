@@ -6,16 +6,14 @@ from pathlib import Path
 import sys
 from typing import TextIO
 
-
-from zmk_locale_generator import LocaleGenerator
+from zmk_locale_generator import LayoutHeaderGenerator
 
 
 def main():
     parser = argparse.ArgumentParser(description="ZMK Locale Header Generator")
-    parser.add_argument("locale", help="locale code (used as the prefix for key names)")
-    parser.add_argument(
-        "-l", "--layout", help="name on kbdlayout.info (default: locale)"
-    )
+    parser.add_argument("prefix", help="prefix for key names")
+    parser.add_argument("path", type=Path, help="path to CLDR keyboard layout XML file")
+    parser.add_argument("--license", "-l", type=Path, help="path to license file")
     parser.add_argument("-o", "--out", type=Path, help="output path (default: stdout)")
     parser.add_argument("-v", "--verbose", action="store_true", help="print debug info")
     parser.add_argument("-z", "--zmk", type=Path, help="path to ZMK repo")
@@ -25,17 +23,18 @@ def main():
     if args.verbose:
         logging.getLogger().setLevel(logging.DEBUG)
 
-    keys_h_path = args.zmk / "app/include/dt-bindings/zmk/keys.h" if args.zmk else None
+    def generate(infile: TextIO, outfile: TextIO):
+        generator = LayoutHeaderGenerator(args.zmk)
+        generator.write_header(
+            infile, outfile, prefix=args.prefix, license_path=args.license
+        )
 
-    def generate(outfile: TextIO):
-        generator = LocaleGenerator(keys_h_path)
-        generator.write_header(outfile, locale=args.locale, layout_name=args.layout)
-
-    if args.out:
-        with args.out.open("w", encoding="utf-8") as outfile:
-            generate(outfile)
-    else:
-        generate(sys.stdout)
+    with args.path.open("r", encoding="utf-8") as infile:
+        if args.out:
+            with args.out.open("w", encoding="utf-8") as outfile:
+                generate(infile, outfile)
+        else:
+            generate(infile, sys.stdout)
 
 
 if __name__ == "__main__":

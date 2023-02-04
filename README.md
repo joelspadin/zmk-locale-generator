@@ -1,8 +1,16 @@
 # ZMK Locale Generator
 
-This Python module generates localized keyboard layout headers for [ZMK](https://zmk.dev) using data from [kbdlayout.info](https://kbdlayout.info/).
+This Python module generates localized keyboard layout headers for [ZMK](https://zmk.dev) using data from the [Unicode CLDR](https://github.com/unicode-org/cldr) or custom layouts in CLDR format.
 
 Python 3.10 or newer is required.
+
+## Setup
+
+Install dependencies with Pip:
+
+```sh
+pip install -r requirements.txt
+```
 
 ## Usage
 
@@ -13,22 +21,20 @@ python -m zmk_locale_generator --help
 To print out the header for a locale:
 
 ```sh
-python -m zmk_locale_generator <LOCALE>
+python -m zmk_locale_generator <PREFIX> <CLDR_FILE>
 ```
 
 To write the header to a file, use `--out`. For example:
 
 ```sh
-python -m zmk_locale_generator DE --out keys_de.h
+python -m zmk_locale_generator DE cldr/keyboards/windows/de-t-k0-windows.xml --out keys_de.h
 ```
 
 By default, this uses a version of ZMK's keys.h from the ZMK submodule. To use a different version of ZMK, specify `--zmk` with the path to ZMK.
 
-If the locale code does not match the layout name on kbdlayout.info, specify `--layout` with the layout name.
-
 ### Batch Generation
 
-The following command will generate a header for every locale defined in [scripts/locales.yaml](scripts/locales.yaml):
+The following command will generate a header for every keyboard layout defined in [keyboards/keyboards.yaml](keyboards/keyboards.yaml):
 
 ```sh
 ./scripts/batch_generate.py
@@ -36,17 +42,30 @@ The following command will generate a header for every locale defined in [script
 
 ## Contributing
 
-PRs are welcome, especially to add new locales or improve key names.
+PRs are welcome, especially to add new keyboard layouts or improve key names.
 
-### Add a Locale/Layout
+### Add a Keyboard Layout
 
-Currently, all layout data comes from [kbdlayout.info](https://kbdlayout.info). If you'd like to add support for a layout which isn't defined there, please submit an issue on GitHub and we can discuss options for including it.
+First, edit [keyboards/keyboards.yaml](keyboards/keyboards.yaml) and add a new item to the list:
 
-First, edit [scripts/locales.yaml](scripts/locales.yaml) and add a new item to the list:
+1. Create a keyboard layout file in CLDR format and place it in the `keyboards` directory, or select an existing file from the `cldr` repo.
+2. Add a new item to `keyboards.yaml` with a `path` key followed by the relative path from `keyboards.yaml` to the file.
+3. If key names should be prefixed with something different than the first word of the file name, add a `prefix` key followed by the prefix.
+4. If the generated header name should be different than the prefix or there is already another keyboard layout using the same prefix, add a `filename` key followed by a unique name. (The script will automatically add `keys_` to the beginning and `.h` to the end, so you should not include those in the name.)
+5. If the layout has its own license, add a `license` key followed by the path to a text file containing the license.
+   - Files from the `cldr` repo will automatically use the Unicode license.
+   - If a license is not specified for a file in the `keyboards` directory, it uses the ZMK license.
 
-1. Add a new line with `- locale: ` followed by an abbreviation for the locale which will prefix all key names. Typically this should be an [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) two or three-letter code.
-1. Open `https://kbdlayout.info/{locale}` in a web browser (replacing `{locale}` with the abbreviation from the previous step). If this does _not_ open a page for the layout you want to add, go back to the [home page](https://kbdlayout.info), find the page for the correct layout, and then add `layout: ` followed by the part of the URL after the last slash. For example, if the URL is [https://kbdlayout.info/kbdus](https://kbdlayout.info/kbdus), add `layout: kbdus`.
-1. If the abbreviation from step 1 is used by multiple locales (e.g. layout variations for the same language) or is not descriptive enough, you can add `filename: ` followed by a new name for the header file. The script will automatically add `keys_` to the beginning and `.h` to the end, so you should not include those in the name.
+For example:
+
+```yaml
+- path: colemak.xml
+  prefix: cm
+  filename: colemak
+  license: colemak-LICENSE.txt
+```
+
+### Update Codepoints
 
 Next, run [scripts/update_codepoints.py] to make sure [codepoints.yaml](zmk_locale_generator/codepoints.yaml) includes entries for all characters used in the keyboard layout:
 
@@ -54,4 +73,4 @@ Next, run [scripts/update_codepoints.py] to make sure [codepoints.yaml](zmk_loca
 ./scripts/update_codepoints.py zmk_locale_generator/codepoints.yaml
 ```
 
-Finally, edit [codepoints.yaml](zmk_locale_generator/codepoints.yaml) and assign names to any codepoints that were added.
+Finally, edit [codepoints.yaml](zmk_locale_generator/codepoints.yaml) and assign names to any codepoints that were added. (New codepoints will have `''` for the name.)

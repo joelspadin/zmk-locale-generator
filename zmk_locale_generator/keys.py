@@ -5,6 +5,7 @@ from pathlib import Path
 import re
 from typing import TextIO
 
+_ZMK_KEYS_PATH = "app/include/dt-bindings/zmk/keys.h"
 _DEFAULT_KEYS_H_PATH = Path(__file__).parent / "keys.h"
 
 _DEFINE_RE = re.compile(r"^\s*#\s*define\s+([a-zA-Z_]\w*)\s+(.+?)\s*(?://\s*(.+))?$")
@@ -45,11 +46,11 @@ class KeyAlias:
     alias: str
 
 
-def parse_keys(keys_h_path: Path = None) -> dict[str, HidUsage | KeyAlias]:
+def parse_zmk_keys(zmk_path: Path = None) -> dict[str, HidUsage | KeyAlias]:
     """
     Parse ZMK's keys.h file.
     """
-    keys_h_path = keys_h_path or _DEFAULT_KEYS_H_PATH
+    keys_h_path = zmk_path / _ZMK_KEYS_PATH if zmk_path else _DEFAULT_KEYS_H_PATH
 
     with keys_h_path.open("r", encoding="utf-8") as f:
         defines = _get_defines(f)
@@ -162,5 +163,6 @@ _DEFAULT_MAP = {
     "B08": "COMMA",
     "B09": "PERIOD",
     "B10": "SLASH",
+    "B11": "INTERNATIONAL_1",
     "A03": "SPACE",
 }
