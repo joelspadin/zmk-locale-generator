@@ -22,15 +22,15 @@ from zmk_locale_generator.codepoints import (
 )
 
 yaml = YAML()
+yaml.version = (1, 2)
 
 UNICODE_BLOCKS_URL = "https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt"
 UNICODE_BLOCK_RE = re.compile(r"^([0-9A-F]+)..([0-9A-F]+); (.+)")
 
 YAML_HEADER = """\
-%YAML 1.2
 # This document maps Unicode codepoints to key names for ZMK.
-# Do not manually add new codepoitns to this file. Instead, add locales to
-# scripts/locales.yaml and run scripts/update_codepoints.py. Then you can
+# Do not manually add new codepoints to this file. Instead, add entries to
+# keyboards/keyboards.yaml and run scripts/update_codepoints.py. Then you can
 # edit this file to assign names to the codepoints it adds.
 #
 # Each value is either a single string or a list of strings which must be valid
@@ -39,7 +39,6 @@ YAML_HEADER = """\
 #
 # If a name matches a name from ZMK's keys.h, any aliases for that key will
 # automatically be added, e.g. for a German layout, ESCAPE -> DE_ESCAPE, DE_ESC.
----
 """
 
 
@@ -175,13 +174,7 @@ def add_codepoint_comments(codepoints: CommentedSeq, blocks: list[UnicodeBlock])
         item: CommentedMap
         block = codepoint_to_block(first_key(item), blocks)
 
-        # ruamel.yaml parses the first block's comment as being a start comment
-        # for the whole sequence, so don't set it on the list item too or it
-        # will duplicate the comment.
-        if block.start == "\0":
-            codepoints.yaml_set_start_comment(block.name)
-        else:
-            codepoints.yaml_set_comment_before_after_key(i, before="\n" + block.name)
+        codepoints.yaml_set_comment_before_after_key(i, before="\n" + block.name)
 
         for c in item.keys():
             if comment := " ".join(get_char_comments(item, c)):
@@ -217,8 +210,8 @@ def main():
         "out",
         type=Path,
         nargs="?",
-        default=Path("./codepoints.yaml"),
-        help="Output file name (default: codepoints.yaml)",
+        default=REPO_PATH / "zmk_locale_generator/codepoints.yaml",
+        help="Output file name (default: zmk_locale_generator/codepoints.yaml)",
     )
 
     args = parser.parse_args()
@@ -231,9 +224,11 @@ def main():
     add_new_codepoint_placeholders(codepoints, blocks, used)
     add_codepoint_comments(codepoints, blocks)
 
+    codepoints.yaml_set_start_comment(YAML_HEADER)
+
     with args.out.open(mode="w", encoding="utf-8") as f:
-        f.write(YAML_HEADER)
         yaml.dump(codepoints, f, transform=transform)
+        f.write("\n")
 
 
 if __name__ == "__main__":
