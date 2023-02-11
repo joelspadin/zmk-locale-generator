@@ -101,19 +101,6 @@ def find_block(codepoints: CommentedSeq, block: UnicodeBlock):
         return item
 
 
-# Ignore control codes aside from these
-CONTROL_CODES = [
-    "\u0007",  # Bell
-    "\t",  # Tab
-    "\r",  # Enter
-    "\u001B",  # Escape character
-]
-
-
-def filter_codepoint(c):
-    return ord(c) >= 0x20 or c in CONTROL_CODES
-
-
 def get_keyboard(path: Path):
     with path.open("r", encoding="utf-8") as f:
         return parse_cldr_keyboard(f)
@@ -128,7 +115,7 @@ def get_used_codepoints():
     codepoints: set[str] = set()
     for keyboard in keyboards:
         for keymap in keyboard.keymaps:
-            codepoints.update(v for v in keymap.keys.values() if filter_codepoint(v))
+            codepoints.update(keymap.keys.values())
 
     return sorted(codepoints)
 

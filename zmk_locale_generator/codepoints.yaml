@@ -14,6 +14,8 @@
 
 # Basic Latin
 - "\u001B": ESCAPE_CHARACTER # (non-printable)
+  "\u001C": FILE_SEPARATOR # (non-printable)
+  "\u001D": GROUP_SEPARATOR # (non-printable)
   "\u0020": SPACE # (non-printable)
   "\u0021": EXCLAMATION # !
   "\u0022": DOUBLE_QUOTES # "
@@ -1570,7 +1572,7 @@
   "\u0BED": TAMIL_7 # ௭
   "\u0BEE": TAMIL_8 # ௮
   "\u0BEF": TAMIL_9 # ௯
-  "\u0BF0": '' # ௰ TAMIL_NUMBER_TEN
+  "\u0BF0": TAMIL_10 # ௰
   "\u0BF1": TAMIL_100 # ௱
   "\u0BF2": TAMIL_1000 # ௲
   "\u0BF3": TAMIL_DAY # ௳
