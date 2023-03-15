@@ -29,7 +29,7 @@ def get_keyboards():
 
     for entry in locales:
         path = (base_path / entry["path"]).resolve()
-        prefix = entry.get("locale", _get_file_prefix(path))
+        prefix = entry.get("prefix", _get_file_prefix(path))
         license = entry.get("license", None)
         filename = f"keys_{entry.get('filename', prefix)}.h"
 

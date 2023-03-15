@@ -8,7 +8,7 @@ import argparse
 import logging
 from pathlib import Path
 import sys
-from keyboards import get_keyboards, Keyboard
+from keyboards import get_keyboards
 
 REPO_PATH = Path(__file__).parent.parent
 
