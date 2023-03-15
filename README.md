@@ -9,25 +9,25 @@ Python 3.10 or newer is required.
 Install dependencies with Pip:
 
 ```sh
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
 
 ```sh
-python -m zmk_locale_generator --help
+python3 -m zmk_locale_generator --help
 ```
 
 To print out the header for a locale:
 
 ```sh
-python -m zmk_locale_generator <PREFIX> <CLDR_FILE>
+python3 -m zmk_locale_generator <PREFIX> <CLDR_FILE>
 ```
 
 To write the header to a file, use `--out`. For example:
 
 ```sh
-python -m zmk_locale_generator DE cldr/keyboards/windows/de-t-k0-windows.xml --out keys_de.h
+python3 -m zmk_locale_generator DE cldr/keyboards/windows/de-t-k0-windows.xml --out keys_de.h
 ```
 
 By default, this uses a version of ZMK's keys.h from the ZMK submodule. To use a different version of ZMK, specify `--zmk` with the path to ZMK.
