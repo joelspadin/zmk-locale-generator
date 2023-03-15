@@ -4,7 +4,43 @@ This Python module generates localized keyboard layout headers for [ZMK](https:/
 
 Python 3.10 or newer is required.
 
-## Setup
+## Using Generated Headers
+
+First, determine what keyboard layout your OS is set to, then [download the matching header from the latest release](https://github.com/joelspadin/zmk-locale-generator/releases) or follow [Generating Headers](#generating-headers) to build the header yourself. Place the header in your ZMK config repo's `config/` directory alongside your `.keymap` file.
+
+Next, edit your `.keymap` file and add an include statement near the top. For example, if the header is named `keys_dvorak.h`, you would add
+
+```c
+#include "keys_dvorak.h"
+```
+
+You can now use the key codes defined in the header in your keymap bindings. For example:
+
+```devicetree
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include "keys_dvorak.h"
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    default_layer {
+      bindings = <
+        &kp DV_GRAVE &kp DV_N1 &kp DV_N2      ...
+        &kp TAB       &kp DV_SQT &kp DV_COMMA ...
+        &kp CAPS       &kp DV_A &kp DV_O      ...
+        &kp LSHIFT      &kp DV_SEMI &kp DV_Q  ...
+        &kp LCTRL &kp LGUI &kp LALT           ...
+      >;
+    }
+  };
+};
+```
+
+## Generating Headers
+
+### Setup
 
 Install dependencies with Pip:
 
@@ -12,7 +48,7 @@ Install dependencies with Pip:
 pip3 install -r requirements.txt
 ```
 
-## Usage
+### Usage
 
 ```sh
 python3 -m zmk_locale_generator --help
