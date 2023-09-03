@@ -42,6 +42,12 @@ You can now use the key codes defined in the header in your keymap bindings. For
 
 ### Setup
 
+Clone submodules:
+
+```sh
+git submodule update --init --recursive
+```
+
 Install dependencies with Pip:
 
 ```sh
