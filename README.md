@@ -16,7 +16,7 @@ Next, edit your `.keymap` file and add an include statement near the top. For ex
 
 You can now use the key codes defined in the header in your keymap bindings. For example:
 
-```devicetree
+```dts
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include "keys_dvorak.h"
