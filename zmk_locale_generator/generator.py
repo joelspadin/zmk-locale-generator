@@ -47,7 +47,7 @@ class LayoutHeaderGenerator:
         layout = cldr.parse_cldr_keyboard(cldr_file)
         defs = self._get_key_definitions(layout)
 
-        license = "\n * ".join(_get_license(license_path).splitlines())
+        license_text = "\n * ".join(_get_license(license_path).splitlines())
 
         out_file.write(
             f"""\
@@ -56,7 +56,7 @@ class LayoutHeaderGenerator:
  *
  * This file was generated from data with the following license:
  *
- * {license}
+ * {license_text}
  */
 
 #pragma once
@@ -79,7 +79,7 @@ class LayoutHeaderGenerator:
                 for alias in aliases:
                     out_file.write(f"#define {alias} ({main})\n")
             else:
-                logging.debug(f"Skipped U+{ord(value):04X} ({value}) = {usage}")
+                logging.debug("Skipped U+%04X (%s) = %s", ord(value), value, usage)
 
     def _lookup_usage(self, name: str) -> HidUsage:
         match self.zmk_keys[name]:

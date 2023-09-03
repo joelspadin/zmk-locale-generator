@@ -118,5 +118,5 @@ _MODIFIERS = {
 def _parse_modifier_key(key) -> Modifier:
     try:
         return _MODIFIERS[key]
-    except KeyError:
-        raise UnsupportedModifier()
+    except KeyError as ex:
+        raise UnsupportedModifier() from ex

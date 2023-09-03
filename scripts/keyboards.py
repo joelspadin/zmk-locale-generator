@@ -13,6 +13,8 @@ CLDR_LICENSE_PATH = CLDR_PATH / "unicode-license.txt"
 
 @dataclass
 class Keyboard:
+    """Keyboard layout definition"""
+
     filename: str  # Header file name
     license: Optional[Path]  # path to license file
     path: Path  # path to CLDR keyboard file
@@ -30,17 +32,19 @@ def get_keyboards():
     for entry in locales:
         path = (base_path / entry["path"]).resolve()
         prefix = entry.get("prefix", _get_file_prefix(path))
-        license = entry.get("license", None)
+        license_text = entry.get("license", None)
         filename = f"keys_{entry.get('filename', prefix)}.h"
 
-        if license is None and path.is_relative_to(CLDR_PATH):
-            license = CLDR_LICENSE_PATH
+        if license_text is None and path.is_relative_to(CLDR_PATH):
+            license_text = CLDR_LICENSE_PATH
 
-        yield Keyboard(filename=filename, license=license, path=path, prefix=prefix)
+        yield Keyboard(
+            filename=filename, license=license_text, path=path, prefix=prefix
+        )
 
 
 def _get_file_prefix(path: Path):
-    if match := re.match("\w+", path.name):
+    if match := re.match(r"\w+", path.name):
         return match.group(0)
 
-    raise Exception(f'{path.name} must start with letters or have "locale" key')
+    raise ValueError(f'{path.name} must start with letters or have "locale" key')
