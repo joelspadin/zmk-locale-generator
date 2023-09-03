@@ -91,7 +91,7 @@ PRs are welcome, especially to add new keyboard layouts or improve key names.
 First, edit [keyboards/keyboards.yaml](keyboards/keyboards.yaml) and add a new item to the list:
 
 1. Create a keyboard layout file in CLDR format and place it in the `keyboards` directory, or select an existing file from the `cldr` repo.
-2. Add a new item to `keyboards.yaml` with a `path` key followed by the relative path from `keyboards.yaml` to the file.
+2. Add a new item to `keyboards.yaml` with a `path` key followed by the relative path from `keyboards.yaml` to the CLDR file.
 3. If key names should be prefixed with something different than the first word of the file name, add a `prefix` key followed by the prefix.
 4. If the generated header name should be different than the prefix or there is already another keyboard layout using the same prefix, add a `filename` key followed by a unique name. (The script will automatically add `keys_` to the beginning and `.h` to the end, so you should not include those in the name.)
 5. If the layout has its own license, add a `license` key followed by the path to a text file containing the license.
