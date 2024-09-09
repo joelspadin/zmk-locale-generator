@@ -1,0 +1,16 @@
+{
+  "name": "zmk-locale-generator",
+  "description": "ZMK Locale Generator Tooling",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare": "husky",
+    "prettier:check": "prettier --check .",
+    "prettier:format": "prettier --write ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^9.1.5",
+    "prettier": "^3.3.3"
+  }
+}

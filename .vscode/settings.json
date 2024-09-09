@@ -4,5 +4,21 @@
     "**/__pycache__": true,
     "**/*.pyc": true
   },
-  "python.formatting.provider": "black"
+  "python.analysis.importFormat": "relative",
+  "python.analysis.typeCheckingMode": "standard",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

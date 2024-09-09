@@ -1,0 +1,41 @@
+[project]
+name = "zmk-locale-generator"
+description = "A tool to generate localized keyboard layout headers for ZMK firmware"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.10"
+dependencies = ["ruamel.yaml >= 0.18.6, < 0.19.0"]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+dev = ["ruff", "pyright"]
+
+[project.urls]
+"Source Code" = "https://github.com/joelspadin/zmk-locale-generator/"
+"Issue Tracker" = "https://github.com/joelspadin/zmk-locale-generator/issues/"
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+exclude = [".git", ".venv", ".vscode", "cldr", "build", "node_modules"]
+
+[tool.ruff.lint]
+# Sort imports
+extend-select = ["I"]
+
+[tool.setuptools]
+packages = ["zmk_locale_generator"]
+
+[tool.setuptools_scm]
+write_to = "zmk_locale_generator/_version.py"

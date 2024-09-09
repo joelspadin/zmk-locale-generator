@@ -51,8 +51,10 @@ git submodule update --init --recursive
 Install dependencies with Pip:
 
 ```sh
-pip3 install -r requirements.txt
+pip3 install .
 ```
+
+You may wish to do this inside a [venv](https://docs.python.org/3/library/venv.html) to avoid conflicts with global scripts.
 
 ### Usage
 
@@ -85,6 +87,24 @@ The following command will generate a header for every keyboard layout defined i
 ## Contributing
 
 PRs are welcome, especially to add new keyboard layouts or improve key names.
+
+### Setup
+
+Install development dependencies with Pip:
+
+```sh
+pip3 install .[dev]
+```
+
+You may wish to do this inside a [venv](https://docs.python.org/3/library/venv.html) to avoid conflicts with global scripts.
+
+Optional: install a Git pre-commit hooks and additional code checkers. This will check your code as you commit it, so you don't have to wait for feedback from GitHub when you make a pull request.
+
+[Install Node.js](https://nodejs.org/en), then run:
+
+```sh
+npm install
+```
 
 ### Add a Keyboard Layout
 
