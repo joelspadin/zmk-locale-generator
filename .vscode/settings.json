@@ -5,7 +5,7 @@
     "**/*.pyc": true
   },
   "python.analysis.importFormat": "relative",
-  "python.analysis.typeCheckingMode": "standard",
+  "python.terminal.activateEnvironment": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },

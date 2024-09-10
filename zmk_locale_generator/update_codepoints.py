@@ -1,31 +1,29 @@
-#!/usr/bin/env python
-
-import argparse
+import json
 import re
 import unicodedata
 import urllib.request
 from dataclasses import dataclass
+from importlib.metadata import Distribution
 from pathlib import Path
 
 from ruamel.yaml import YAML
 from ruamel.yaml.comments import CommentedMap
 
-from zmk_locale_generator import get_keyboards
-from zmk_locale_generator.cldr import parse_cldr_keyboard
-from zmk_locale_generator.codepoints import (
+from .cldr import parse_cldr_keyboard
+from .codepoints import (
     CodepointNames,
     CodepointNamesRaw,
     get_codepoint_names_raw,
     is_visible_character,
 )
+from .keyboards import get_keyboards
 
 yaml = YAML()
 yaml.version = (1, 2)
 
-REPO_PATH = Path(__file__).parent.parent
+ROOT_PATH = Path(__file__).parent
 
-KEYBOARDS_PATH = REPO_PATH / "keyboards/keyboards.yaml"
-CLDR_PATH = REPO_PATH / "cldr"
+KEYBOARDS_PATH = ROOT_PATH / "keyboards/keyboards.yaml"
 
 UNICODE_BLOCKS_URL = "https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt"
 UNICODE_BLOCK_RE = re.compile(r"^([0-9A-F]+)..([0-9A-F]+); (.+)")
@@ -114,8 +112,7 @@ def get_used_codepoints():
     Get the list of codepoints that are used by the selected keyboard layouts.
     """
     keyboards = [
-        get_keyboard(keyboard.path)
-        for keyboard in get_keyboards(KEYBOARDS_PATH, CLDR_PATH)
+        get_keyboard(keyboard.path) for keyboard in get_keyboards(KEYBOARDS_PATH)
     ]
 
     codepoints: set[str] = set()
@@ -196,17 +193,30 @@ def transform(text: str):
     return "\n".join(transform_line(line) for line in text.splitlines())
 
 
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "out",
-        type=Path,
-        nargs="?",
-        default=REPO_PATH / "zmk_locale_generator/codepoints.yaml",
-        help="Output file name (default: zmk_locale_generator/codepoints.yaml)",
-    )
+def is_editable() -> bool:
+    url = Distribution.from_name("zmk_locale_generator").read_text("direct_url.json")
+    if not url:
+        return False
 
-    args = parser.parse_args()
+    return bool(json.loads(url).get("dir_info", {}).get("editable", False))
+
+
+def update_codepoints(path: Path | None = None):
+    """
+    Update the codepoints.yaml file at the given path, creating new keys for any
+    key codes defined in CLDR data but not in the YAML file.
+
+    If path is None, updates the codepoints.yaml file embedded withint the
+    package. This requires the package be installed in editable mode.
+    """
+
+    if path is None:
+        if not is_editable():
+            raise RuntimeError(
+                "Package is not installed in editable mode. An output path is required."
+            )
+
+        path = ROOT_PATH / "codepoints.yaml"
 
     blocks = list(get_unicode_blocks())
     codepoints = get_codepoint_names_raw()
@@ -218,10 +228,6 @@ def main():
 
     codepoints.yaml_set_start_comment(YAML_HEADER)
 
-    with args.out.open(mode="w", encoding="utf-8") as f:
+    with path.open(mode="w", encoding="utf-8") as f:
         yaml.dump(codepoints, f, transform=transform)
         f.write("\n")
-
-
-if __name__ == "__main__":
-    main()

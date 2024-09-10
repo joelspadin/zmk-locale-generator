@@ -11,20 +11,20 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
 
       - name: install dependencies
         run: |
           git submodule update --init --recursive
-          pip3 install -r requirements.txt
+          pip3 install .
       - name: build
-        run: python3 scripts/batch_generate.py
+        run: zmk_locale_generator all
 
       - name: release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         with:
           fail_on_unmatched_files: true
           generate_release_notes: true

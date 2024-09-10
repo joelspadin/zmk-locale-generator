@@ -104,13 +104,18 @@ class LayoutHeaderGenerator:
     def _get_raw_definitions(self, keyboard: cldr.CldrKeyboard):
         for keymap in keyboard.keymaps:
             for key, value in keymap.keys.items():
-                usage = self._lookup_usage(get_zmk_name(key))
+                try:
+                    usage = self._lookup_usage(get_zmk_name(key))
 
-                if keymap.modifiers:
-                    modifiers = usage.modifiers | keymap.modifiers
-                    usage = HidUsage(modifiers, usage.page, usage.id)
+                    if keymap.modifiers:
+                        modifiers = usage.modifiers | keymap.modifiers
+                        usage = HidUsage(modifiers, usage.page, usage.id)
 
-                yield usage, value
+                    yield usage, value
+                except KeyError:
+                    logging.debug(
+                        f'No ZMK defined name for key {key}. Ignoring "{value}"'
+                    )
 
     def _get_key_names(self, locale: str, value: str):
         names = self.codepoint_names.get(value, [])

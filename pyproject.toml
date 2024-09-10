@@ -23,15 +23,34 @@ dev = ["ruff", "pyright"]
 "Source Code" = "https://github.com/joelspadin/zmk-locale-generator/"
 "Issue Tracker" = "https://github.com/joelspadin/zmk-locale-generator/issues/"
 
+[project.scripts]
+zmk_locale_generator = "zmk_locale_generator.__main__:main"
+
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.pyright]
-exclude = [".git", ".venv", ".vscode", "build", "cldr", "node_modules", "zmk"]
+exclude = [
+    ".git",
+    ".venv",
+    ".vscode",
+    "build",
+    "node_modules",
+    "zmk_locale_generator/keyboards/cldr",
+    "zmk_locale_generator/zmk",
+]
 
 [tool.ruff]
-exclude = [".git", ".venv", ".vscode", "build", "cldr", "node_modules", "zmk"]
+exclude = [
+    ".git",
+    ".venv",
+    ".vscode",
+    "build",
+    "node_modules",
+    "zmk_locale_generator/keyboards/cldr",
+    "zmk_locale_generator/zmk",
+]
 
 [tool.ruff.lint]
 # Sort imports
@@ -41,7 +60,12 @@ extend-select = ["I"]
 packages = ["zmk_locale_generator"]
 
 [tool.setuptools.package-data]
-zmk_locale_generator = ['keys.h']
+zmk_locale_generator = [
+    "zmk/app/include/dt-bindings/zmk/keys.h",
+    "keyboards/*",
+    "keyboards/cldr/unicode-license.txt",
+    "keyboards/cldr/keyboards/windows/*",
+]
 
 [tool.setuptools_scm]
 write_to = "zmk_locale_generator/_version.py"

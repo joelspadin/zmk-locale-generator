@@ -42,52 +42,47 @@ You can now use the key codes defined in the header in your keymap bindings. For
 
 ### Setup
 
-Clone submodules:
+Install [Pipx](https://pipx.pypa.io/stable/), then use it to install ZMK Locale Generator:
 
 ```sh
-git submodule update --init --recursive
-```
-
-Create a [venv](https://docs.python.org/3/library/venv.html):
-
-```sh
-python3 -m venv .venv
-```
-
-Activate the venv using the [appropriate command for your shell](https://docs.python.org/3/library/venv.html#how-venvs-work)/
-
-Inside the venv, install dependencies with Pip:
-
-```sh
-pip install .
+pipx install https://github.com/joelspadin/zmk-locale-generator.git
 ```
 
 ### Usage
 
+The following command will generate a header for every keyboard layout defined in [keyboards/keyboards.yaml](keyboards/keyboards.yaml) and write them to a directory named `out`:
+
 ```sh
-python -m zmk_locale_generator --help
+zmk_locale_generator all
 ```
 
-To print out the header for a locale:
+The following command will generate a header for a single locale:
 
 ```sh
-python -m zmk_locale_generator <PREFIX> <CLDR_FILE>
+zmk_locale_generator single <PREFIX> <CLDR_FILE>
 ```
 
-To write the header to a file, use `--out`. For example:
+Where:
+
+- `<PREFIX>` is a prefix to attach to all key code names, e.g. `DE` for German.
+- `<CLDR_FILE>` is the path to an XML file formatted similar to the ones from the [Unicode CLDR](https://github.com/unicode-org/cldr/tree/maint/maint-43/keyboards).
+
+For example:
 
 ```sh
-python -m zmk_locale_generator DE cldr/keyboards/windows/de-t-k0-windows.xml --out keys_de.h
+zmk_locale_generator single DE de-t-k0-windows.xml
 ```
 
-By default, this uses a version of ZMK's keys.h from the ZMK submodule. To use a different version of ZMK, specify `--zmk` with the path to ZMK.
-
-### Batch Generation
-
-The following command will generate a header for every keyboard layout defined in [keyboards/keyboards.yaml](keyboards/keyboards.yaml):
+This will print the generated header to stdout. To write the header to a file instead, use `--out`. For example:
 
 ```sh
-./scripts/batch_generate.py
+zmk_locale_generator single DE de-t-k0-windows.xml --out keys_de.h
+```
+
+For more usage information, run
+
+```sh
+zmk_locale_generator --help
 ```
 
 ## Contributing
@@ -96,10 +91,18 @@ PRs are welcome, especially to add new keyboard layouts or improve key names.
 
 ### Setup
 
-Create and activate a venv [as described above](#setup), then install development dependencies with Pip:
+Optional: create a [venv](https://docs.python.org/3/library/venv.html) to ensure this project doesn't conflict with global packages:
 
 ```sh
-pip install .[dev]
+python3 -m venv .venv
+```
+
+After creating the venv, [activate it](https://docs.python.org/3/library/venv.html#how-venvs-work) as necessary for the shell you are using.
+
+Install the package in editable mode:
+
+```sh
+pip install -e .[dev]
 ```
 
 Optional: install a Git pre-commit hooks and additional code checkers. This will check your code as you commit it, so you don't have to wait for feedback from GitHub when you make a pull request.
@@ -112,15 +115,14 @@ npm install
 
 ### Add a Keyboard Layout
 
-First, edit [keyboards/keyboards.yaml](keyboards/keyboards.yaml) and add a new item to the list:
+First, edit [zmk_locale_generator/keyboards/keyboards.yaml](zmk_locale_generator/keyboards/keyboards.yaml) and add a new item to the list:
 
 1. Create a keyboard layout file in CLDR format and place it in the `keyboards` directory, or select an existing file from the `cldr` repo.
 2. Add a new item to `keyboards.yaml` with a `path` key followed by the relative path from `keyboards.yaml` to the CLDR file.
 3. If key names should be prefixed with something different than the first word of the file name, add a `prefix` key followed by the prefix.
 4. If the generated header name should be different than the prefix or there is already another keyboard layout using the same prefix, add a `filename` key followed by a unique name. (The script will automatically add `keys_` to the beginning and `.h` to the end, so you should not include those in the name.)
-5. If the layout has its own license, add a `license` key followed by the path to a text file containing the license.
-   - Files from the `cldr` repo will automatically use the Unicode license.
-   - If a license is not specified for a file in the `keyboards` directory, it uses the ZMK license.
+5. If the layout has its own license, add a `license` key followed by the relative path to a text file containing the license.
+   - If a license is not specified, it uses the Unicode CLDR license.
 
 For example:
 
@@ -133,10 +135,10 @@ For example:
 
 ### Update Codepoints
 
-Next, run [scripts/update_codepoints.py] to make sure [codepoints.yaml](zmk_locale_generator/codepoints.yaml) includes entries for all characters used in the keyboard layout:
+Next, run `zmk_locale_generator update_codepoints` to make sure [codepoints.yaml](zmk_locale_generator/codepoints.yaml) includes entries for all characters used in the keyboard layout:
 
 ```sh
-./scripts/update_codepoints.py
+zmk_locale_generator update_codepoints
 ```
 
 Finally, edit [codepoints.yaml](zmk_locale_generator/codepoints.yaml) and assign names to any codepoints that were added. (New codepoints will have `''` for the name.)

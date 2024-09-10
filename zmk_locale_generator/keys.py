@@ -6,7 +6,7 @@ from pathlib import Path
 from typing import TextIO
 
 _ZMK_KEYS_PATH = "app/include/dt-bindings/zmk/keys.h"
-_DEFAULT_KEYS_H_PATH = Path(__file__).parent / "keys.h"
+_DEFAULT_KEYS_H_PATH = Path(__file__).parent / "zmk" / _ZMK_KEYS_PATH
 
 _DEFINE_RE = re.compile(r"^\s*#\s*define\s+([a-zA-Z_]\w*)\s+(.+?)\s*(?://\s*(.+))?$")
 _LINE_CONTINUATION = "\\\n"
