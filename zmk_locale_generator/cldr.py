@@ -1,9 +1,9 @@
-from dataclasses import dataclass, field
-from itertools import chain
 import re
-from typing import IO
 import unicodedata
 import xml.etree.ElementTree as ET
+from dataclasses import dataclass, field
+from itertools import chain
+from typing import IO
 
 from .keys import Modifier
 
@@ -26,9 +26,16 @@ def parse_cldr_keyboard(source: IO):
     root = tree.getroot()
 
     locale = root.get("locale")
-    try:
-        names = [name.get("value") for name in root.find("names").findall("name")]
-    except AttributeError:
+    if not isinstance(locale, str):
+        raise TypeError('Expected "locale" attribute in <keyboard> element.')
+
+    if names_element := root.find("names"):
+        names = [
+            value
+            for name in names_element.findall("name")
+            if (value := name.get("value"))
+        ]
+    else:
         names = [locale]
 
     keymaps = list(
@@ -63,13 +70,15 @@ def _is_valid_character(c: str):
 
 def _parse_keymap(keymap: ET.Element):
     keys = {
-        key.get("iso"): v
+        iso: v
         for key in keymap.findall("map")
-        if _is_valid_character(v := _unescape(key.get("to")))
+        if (iso := key.get("iso"))
+        and (to := key.get("to"))
+        and _is_valid_character(v := _unescape(to))
     }
 
     if modifiers := keymap.get("modifiers"):
-        modifier_groups = _parse_modifiers(keymap.get("modifiers"))
+        modifier_groups = _parse_modifiers(modifiers)
 
         for modifiers in modifier_groups:
             yield KeyMap(keys=keys, modifiers=modifiers)

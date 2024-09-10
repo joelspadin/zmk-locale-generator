@@ -2,8 +2,8 @@
 
 import argparse
 import logging
-from pathlib import Path
 import sys
+from pathlib import Path
 from typing import TextIO
 
 from zmk_locale_generator import LayoutHeaderGenerator

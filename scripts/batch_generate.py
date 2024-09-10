@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 """
 Runs zmk_locale_generator for all locales in locales.yaml.
@@ -7,14 +7,13 @@ Runs zmk_locale_generator for all locales in locales.yaml.
 import argparse
 import logging
 from pathlib import Path
-import sys
-from keyboards import get_keyboards
+
+from zmk_locale_generator import LayoutHeaderGenerator, get_keyboards
 
 REPO_PATH = Path(__file__).parent.parent
 
-sys.path.insert(0, str(REPO_PATH))
-
-from zmk_locale_generator import LayoutHeaderGenerator
+KEYBOARDS_PATH = REPO_PATH / "keyboards/keyboards.yaml"
+CLDR_PATH = REPO_PATH / "cldr"
 
 
 def main():
@@ -37,7 +36,7 @@ def main():
 
     generator = LayoutHeaderGenerator(args.zmk)
 
-    for keyboard in get_keyboards():
+    for keyboard in get_keyboards(KEYBOARDS_PATH, CLDR_PATH):
         out_path = args.out / keyboard.filename
 
         print(f"{shorten_path(keyboard.path)} -> {out_path}")

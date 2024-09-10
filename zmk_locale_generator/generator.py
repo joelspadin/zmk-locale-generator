@@ -1,12 +1,12 @@
+import logging
 from collections import defaultdict
 from datetime import date
-import logging
 from pathlib import Path
 from typing import TextIO
 
 from . import cldr
 from .codepoints import get_codepoint_names, is_visible_character
-from .keys import HidUsage, KeyAlias, Modifier, parse_zmk_keys, get_zmk_name
+from .keys import HidUsage, KeyAlias, Modifier, get_zmk_name, parse_zmk_keys
 from .util import unique
 
 DEFAULT_LICENSE = f"""\
@@ -34,7 +34,7 @@ class LayoutHeaderGenerator:
         cldr_file: TextIO,
         out_file: TextIO,
         prefix: str,
-        license_path: Path = None,
+        license_path: Path | None = None,
     ):
         """
         Write a locale header.

@@ -1,12 +1,17 @@
 from pathlib import Path
-from ruamel.yaml import YAML
-from ruamel.yaml.comments import CommentedSeq, CommentedMap
 
+from ruamel.yaml import YAML
+
+from .typing import CommentedMap, CommentedSeq
 
 CODEPOINTS_PATH = Path(__file__).parent / "codepoints.yaml"
 
 
-def get_codepoint_names() -> dict[str, str | list[str]]:
+CodepointNames = dict[str, str | list[str]]
+CodepointNamesRaw = CommentedSeq[CommentedMap[str, str | list[str]]]
+
+
+def get_codepoint_names() -> CodepointNames:
     """
     Get a mapping of codepoints to a single name or list of names from
     codepoints.yaml.
@@ -18,7 +23,7 @@ def get_codepoint_names() -> dict[str, str | list[str]]:
     return {k: v for k, v in flattened if v}
 
 
-def get_codepoint_names_raw() -> CommentedSeq[CommentedMap[str, str | list[str]]]:
+def get_codepoint_names_raw() -> CodepointNamesRaw:
     """
     Get the raw data from codepoints.yaml for round-trip editing.
     """
@@ -35,4 +40,4 @@ INVISIBLE_CHARACTERS = [
 
 
 def is_visible_character(c: str):
-    return c.isprintable() and not c.isspace() and not c in INVISIBLE_CHARACTERS
+    return c.isprintable() and not c.isspace() and c not in INVISIBLE_CHARACTERS

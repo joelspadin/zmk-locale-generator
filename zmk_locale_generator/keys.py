@@ -1,8 +1,8 @@
 import ast
+import re
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-import re
 from typing import TextIO
 
 _ZMK_KEYS_PATH = "app/include/dt-bindings/zmk/keys.h"
@@ -46,7 +46,7 @@ class KeyAlias:
     alias: str
 
 
-def parse_zmk_keys(zmk_path: Path = None) -> dict[str, HidUsage | KeyAlias]:
+def parse_zmk_keys(zmk_path: Path | None = None) -> dict[str, HidUsage | KeyAlias]:
     """
     Parse ZMK's keys.h file.
     """

@@ -27,8 +27,11 @@ dev = ["ruff", "pyright"]
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
+[tool.pyright]
+exclude = [".git", ".venv", ".vscode", "build", "cldr", "node_modules", "zmk"]
+
 [tool.ruff]
-exclude = [".git", ".venv", ".vscode", "cldr", "build", "node_modules"]
+exclude = [".git", ".venv", ".vscode", "build", "cldr", "node_modules", "zmk"]
 
 [tool.ruff.lint]
 # Sort imports
@@ -36,6 +39,9 @@ extend-select = ["I"]
 
 [tool.setuptools]
 packages = ["zmk_locale_generator"]
+
+[tool.setuptools.package-data]
+zmk_locale_generator = ['keys.h']
 
 [tool.setuptools_scm]
 write_to = "zmk_locale_generator/_version.py"

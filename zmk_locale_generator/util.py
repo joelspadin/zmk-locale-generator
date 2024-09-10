@@ -1,6 +1,5 @@
 from typing import Any, Callable, Iterable, TypeVar
 
-
 T = TypeVar(name="T")
 
 

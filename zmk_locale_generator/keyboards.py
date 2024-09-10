@@ -1,14 +1,11 @@
+import re
 from dataclasses import dataclass
 from pathlib import Path
-import re
 from typing import Optional
+
 from ruamel.yaml import YAML
 
-REPO_PATH = Path(__file__).parent.parent
-
-KEYBOARDS_PATH = REPO_PATH / "keyboards/keyboards.yaml"
-CLDR_PATH = REPO_PATH / "cldr"
-CLDR_LICENSE_PATH = CLDR_PATH / "unicode-license.txt"
+CLDR_LICENSE_NAME = "unicode-license.txt"
 
 
 @dataclass
@@ -21,13 +18,16 @@ class Keyboard:
     prefix: str  # Locale prefix
 
 
-def get_keyboards():
+def get_keyboards(keyboards_path: Path, cldr_path: Path):
     """
-    Get the list of keyboards from keyboards.yaml.
+    Get a list of keyboards from a YAML file.
+
+    :param keyboards_path: Path to a YAML file containing an array of Keyboard objects.
+    :param cldr_path: Path to the CLDR repo directory.
     """
     yaml = YAML()
-    locales: list[dict[str, str]] = yaml.load(KEYBOARDS_PATH)
-    base_path = KEYBOARDS_PATH.parent
+    locales: list[dict[str, str]] = yaml.load(keyboards_path)
+    base_path = keyboards_path.parent
 
     for entry in locales:
         path = (base_path / entry["path"]).resolve()
@@ -35,11 +35,14 @@ def get_keyboards():
         license_text = entry.get("license", None)
         filename = f"keys_{entry.get('filename', prefix)}.h"
 
-        if license_text is None and path.is_relative_to(CLDR_PATH):
-            license_text = CLDR_LICENSE_PATH
+        if license_text is None and path.is_relative_to(cldr_path):
+            license_text = cldr_path / CLDR_LICENSE_NAME
+
+        if not isinstance(license_text, (str, Path)):
+            raise TypeError(f"Failed to determine license for {path}")
 
         yield Keyboard(
-            filename=filename, license=license_text, path=path, prefix=prefix
+            filename=filename, license=Path(license_text), path=path, prefix=prefix
         )
 
 

@@ -48,30 +48,36 @@ Clone submodules:
 git submodule update --init --recursive
 ```
 
-Install dependencies with Pip:
+Create a [venv](https://docs.python.org/3/library/venv.html):
 
 ```sh
-pip3 install .
+python3 -m venv .venv
 ```
 
-You may wish to do this inside a [venv](https://docs.python.org/3/library/venv.html) to avoid conflicts with global scripts.
+Activate the venv using the [appropriate command for your shell](https://docs.python.org/3/library/venv.html#how-venvs-work)/
+
+Inside the venv, install dependencies with Pip:
+
+```sh
+pip install .
+```
 
 ### Usage
 
 ```sh
-python3 -m zmk_locale_generator --help
+python -m zmk_locale_generator --help
 ```
 
 To print out the header for a locale:
 
 ```sh
-python3 -m zmk_locale_generator <PREFIX> <CLDR_FILE>
+python -m zmk_locale_generator <PREFIX> <CLDR_FILE>
 ```
 
 To write the header to a file, use `--out`. For example:
 
 ```sh
-python3 -m zmk_locale_generator DE cldr/keyboards/windows/de-t-k0-windows.xml --out keys_de.h
+python -m zmk_locale_generator DE cldr/keyboards/windows/de-t-k0-windows.xml --out keys_de.h
 ```
 
 By default, this uses a version of ZMK's keys.h from the ZMK submodule. To use a different version of ZMK, specify `--zmk` with the path to ZMK.
@@ -90,13 +96,11 @@ PRs are welcome, especially to add new keyboard layouts or improve key names.
 
 ### Setup
 
-Install development dependencies with Pip:
+Create and activate a venv [as described above](#setup), then install development dependencies with Pip:
 
 ```sh
-pip3 install .[dev]
+pip install .[dev]
 ```
-
-You may wish to do this inside a [venv](https://docs.python.org/3/library/venv.html) to avoid conflicts with global scripts.
 
 Optional: install a Git pre-commit hooks and additional code checkers. This will check your code as you commit it, so you don't have to wait for feedback from GitHub when you make a pull request.
 
@@ -132,7 +136,7 @@ For example:
 Next, run [scripts/update_codepoints.py] to make sure [codepoints.yaml](zmk_locale_generator/codepoints.yaml) includes entries for all characters used in the keyboard layout:
 
 ```sh
-./scripts/update_codepoints.py zmk_locale_generator/codepoints.yaml
+./scripts/update_codepoints.py
 ```
 
 Finally, edit [codepoints.yaml](zmk_locale_generator/codepoints.yaml) and assign names to any codepoints that were added. (New codepoints will have `''` for the name.)

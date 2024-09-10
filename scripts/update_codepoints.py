@@ -1,28 +1,31 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import argparse
-from dataclasses import dataclass
-from pathlib import Path
 import re
-from ruamel.yaml import YAML
-from ruamel.yaml.comments import CommentedMap, CommentedSeq
-import sys
 import unicodedata
 import urllib.request
+from dataclasses import dataclass
+from pathlib import Path
 
-REPO_PATH = Path(__file__).parent.parent
+from ruamel.yaml import YAML
+from ruamel.yaml.comments import CommentedMap
 
-sys.path.insert(0, str(REPO_PATH))
-
-from keyboards import get_keyboards
+from zmk_locale_generator import get_keyboards
 from zmk_locale_generator.cldr import parse_cldr_keyboard
 from zmk_locale_generator.codepoints import (
+    CodepointNames,
+    CodepointNamesRaw,
     get_codepoint_names_raw,
     is_visible_character,
 )
 
 yaml = YAML()
 yaml.version = (1, 2)
+
+REPO_PATH = Path(__file__).parent.parent
+
+KEYBOARDS_PATH = REPO_PATH / "keyboards/keyboards.yaml"
+CLDR_PATH = REPO_PATH / "cldr"
 
 UNICODE_BLOCKS_URL = "https://www.unicode.org/Public/UCD/latest/ucd/Blocks.txt"
 UNICODE_BLOCK_RE = re.compile(r"^([0-9A-F]+)..([0-9A-F]+); (.+)")
@@ -80,11 +83,11 @@ def codepoint_to_block(c: str, blocks: list[UnicodeBlock]):
     return next(block for block in blocks if c >= block.start and c <= block.end)
 
 
-def first_key(map: CommentedMap):
+def first_key(map: CodepointNames):
     return list(map.keys())[0]
 
 
-def find_block(codepoints: CommentedSeq, block: UnicodeBlock):
+def find_block(codepoints: CodepointNamesRaw, block: UnicodeBlock):
     """
     Find the YAML object for a Unicode block, creating it if necessary.
     """
@@ -110,7 +113,10 @@ def get_used_codepoints():
     """
     Get the list of codepoints that are used by the selected keyboard layouts.
     """
-    keyboards = [get_keyboard(keyboard.path) for keyboard in get_keyboards()]
+    keyboards = [
+        get_keyboard(keyboard.path)
+        for keyboard in get_keyboards(KEYBOARDS_PATH, CLDR_PATH)
+    ]
 
     codepoints: set[str] = set()
     for keyboard in keyboards:
@@ -120,35 +126,35 @@ def get_used_codepoints():
     return sorted(codepoints)
 
 
-def remove_unused_codepoints(codepoints: CommentedSeq, used: list[str]):
+def remove_unused_codepoints(codepoints: CodepointNamesRaw, used: list[str]):
     """
     Remove codepoints that are no longer used by any locale.
     """
     for block in codepoints:
         for c in list(block.keys()):
-            if not c in used:
+            if c not in used:
                 del block[c]
 
 
 def add_new_codepoint_placeholders(
-    codepoints: CommentedSeq, blocks: list[UnicodeBlock], used: list[str]
+    codepoints: CodepointNamesRaw, blocks: list[UnicodeBlock], used: list[str]
 ):
     """
     Add a placeholder name for new codepoints to indicate they need to be named.
     """
     for c in used:
         block = find_block(codepoints, codepoint_to_block(c, blocks))
-        if not c in block:
+        if c not in block:
             pos = upper_bound(block.keys(), c)
             block.insert(pos, c, "")
 
 
-def add_codepoint_comments(codepoints: CommentedSeq, blocks: list[UnicodeBlock]):
+def add_codepoint_comments(codepoints: CodepointNamesRaw, blocks: list[UnicodeBlock]):
     """
     Add a comment to show the character for every printable character.
     """
 
-    def get_char_comments(item: CommentedMap, c: str):
+    def get_char_comments(item: CodepointNames, c: str):
         yield c if is_visible_character(c) else "(non-printable)"
 
         if not item[c]:
@@ -158,7 +164,6 @@ def add_codepoint_comments(codepoints: CommentedSeq, blocks: list[UnicodeBlock])
                 pass
 
     for i, item in enumerate(codepoints):
-        item: CommentedMap
         block = codepoint_to_block(first_key(item), blocks)
 
         codepoints.yaml_set_comment_before_after_key(i, before="\n" + block.name)
