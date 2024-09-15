@@ -4,7 +4,15 @@ This Python module generates localized keyboard layout headers for [ZMK](https:/
 
 Python 3.10 or newer is required.
 
-## Using Generated Headers
+## Usage
+
+### Using a module
+
+Add the [ZMK Locales module](https://github.com/joelspadin/zmk-locales) to your build to make all the generated headers available. See the documentation in that repo for more details.
+
+### Using generated headers directly
+
+If you do not want to use a module, or if you want to generate your own headers to use, then you can copy the header files directly into your config repo.
 
 First, determine what keyboard layout your OS is set to, then [download the matching header from the latest release](https://github.com/joelspadin/zmk-locale-generator/releases) or follow [Generating Headers](#generating-headers) to build the header yourself. Place the header in your ZMK config repo's `config/` directory alongside your `.keymap` file.
 
