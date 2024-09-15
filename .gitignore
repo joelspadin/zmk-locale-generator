@@ -3,6 +3,7 @@
 
 .ruff_cache
 _version.py
+*.code-workspace
 
 
 # Byte-compiled / optimized / DLL files
