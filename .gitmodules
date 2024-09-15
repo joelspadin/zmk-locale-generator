@@ -4,3 +4,4 @@
 [submodule "zmk_locale_generator/cldr"]
 	path = zmk_locale_generator/keyboards/cldr
 	url = https://github.com/unicode-org/cldr.git
+	shallow = true
