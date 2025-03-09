@@ -53,7 +53,7 @@ You can now use the key codes defined in the header in your keymap bindings. For
 Install [Pipx](https://pipx.pypa.io/stable/), then use it to install ZMK Locale Generator:
 
 ```sh
-pipx install https://github.com/joelspadin/zmk-locale-generator.git
+pipx install git+https://github.com/joelspadin/zmk-locale-generator.git
 ```
 
 ### Usage
